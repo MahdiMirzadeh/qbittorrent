@@ -7,12 +7,12 @@
 
 ### Usage
 1. Download your chosen theme:
-- [dark](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/dark.qbtheme)
-- [dracula](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/dracula.qbtheme)
-- [solarized-dark](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/solarized-dark.qbtheme)
-- [solarized-light](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/solarized-light.qbtheme)
-- [gruvbox-dark](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/gruvbox-dark.qbtheme)
-- [gruvbox-light](https://raw.githubusercontent.com/MahdiMirzadeh/qbittorrent/refs/heads/master/qt/gruvbox-light.qbtheme)
+- [dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.qbtheme)
+- [dracula](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.qbtheme)
+- [solarized-dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.qbtheme)
+- [solarized-light](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.qbtheme)
+- [gruvbox-dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.qbtheme)
+- [gruvbox-light](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.qbtheme)
 
 2. Go to your qBittorrent application:
    1. Enable theme selection from menu. (Tools -> Options -> Behavior -> Interface -> Use custom UI Theme)
