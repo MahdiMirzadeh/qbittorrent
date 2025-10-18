@@ -132,52 +132,193 @@ This repository contains:
 ```
 
 ### Qt Client Themes
-**Format**: A single `.qbtheme` bundle loaded by qBittorrent's Qt client at runtime.
 
-**Contents**:
-- `stylesheet.qss` — Qt Style Sheet (CSS-like syntax)
-- `config.json` — Palette and semantic colors
-- `icons/` — Optional SVG resources (e.g., custom checkboxes)
+#### Overview
 
-**Templates** (`template/qt/`):
-- `stylesheet.qss.template` and `config.json.template` use placeholders like `%BG_PRIMARY%`, `%FG_PRIMARY%`, `%ACCENT%`
-- `icons/` directory contains SVGs referenced in QSS: `url(:/uitheme/icons/checkbox_checked.svg)`
+qBittorrent themes (supported since **v4.2.2**) are `.qbtheme` bundles — Qt Resource Collection (RCC) files loaded at runtime. These bundles use the virtual path `:/uitheme` for all resources.
 
-**Build Process** (`./gen.sh`):
-1. Reads color definitions from `themes/<name>.json` using `jq`
-2. Generates `stylesheet.qss` and `config.json` via token substitution (sed)
-3. Compiles resources with `rcc` → `qt/<name>.qbtheme`
+#### File Structure
 
-**Compatibility**:
-- **qBittorrent v4.6.0+** (Qt6-based) — fully supported
-- **qBittorrent < v4.6.0** (Qt5) — generally works, minor visual differences possible
+A `.qbtheme` file must contain:
 
-**Adding Custom Icons**:
-- Place SVGs in `template/qt/icons/`
-- Reference them in QSS: `url(:/uitheme/icons/your_icon.svg)`
+- **`stylesheet.qss`** (required) — Qt Style Sheet defining widget appearance
+- **`config.json`** (required, since **v4.3.0**) — Color definitions for GUI elements
+- **`icons/`** (optional, since **v4.3.0**) — Custom icon overrides
+
+#### `stylesheet.qss` — Qt Style Sheets
+
+Uses CSS-like syntax to style Qt widgets. Resources are referenced via `:/uitheme` prefix:
+
+```css
+QPushButton {
+    background: #282a36;
+    border: 1px solid #44475a;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/uitheme/icons/checkbox_checked.svg);
+}
+```
+
+**References**:
+- [Qt Style Sheets Reference](https://doc.qt.io/qt-6/stylesheet-reference.html)
+- [Qt Style Sheets Examples](https://doc.qt.io/qt-6/stylesheet-examples.html)
+
+#### `config.json` — Color Definitions
+
+Defines semantic colors used throughout qBittorrent's GUI. Accepts `#rrggbb` hex or [Qt color names](https://doc.qt.io/qt-6/qml-color.html#svg-color-reference).
+
+**Supported color keys**:
+
+```json
+{
+  "colors": {
+    // Palette roles (Qt standard)
+    "Palette.Window": "#282a36",
+    "Palette.WindowText": "#f8f8f2",
+    "Palette.Base": "#1e1f29",
+    "Palette.AlternateBase": "#282a36",
+    "Palette.Text": "#f8f8f2",
+    "Palette.Button": "#44475a",
+    "Palette.ButtonText": "#f8f8f2",
+    "Palette.BrightText": "#ffffff",
+    "Palette.Highlight": "#bd93f9",
+    "Palette.HighlightedText": "#ffffff",
+    "Palette.Link": "#8be9fd",
+    "Palette.Light": "#6272a4",
+    "Palette.Midlight": "#44475a",
+    "Palette.Mid": "#383a59",
+    "Palette.Dark": "#191a21",
+    
+    // Log colors
+    "Log.TimeStamp": "#6272a4",
+    "Log.Normal": "#f8f8f2",
+    "Log.Info": "#8be9fd",
+    "Log.Warning": "#ffb86c",
+    "Log.Critical": "#ff5555",
+    "Log.BannedPeer": "#ff79c6",
+    
+    // Transfer list state colors
+    "TransferList.Downloading": "#50fa7b",
+    "TransferList.StalledDownloading": "#f1fa8c",
+    "TransferList.Uploading": "#bd93f9",
+    "TransferList.StalledUploading": "#ffb86c",
+    "TransferList.PausedDownloading": "#ff6e6e",
+    "TransferList.PausedUploading": "#ff79c6",
+    "TransferList.Error": "#ff5555",
+    "TransferList.MissingFiles": "#ff5555"
+  }
+}
+```
+
+#### Custom Icons
+
+Override default icons by including files matching [qBittorrent's icon names](https://github.com/qbittorrent/qBittorrent/tree/master/src/icons) in your theme:
+
+```
+icons/
+├── application-exit.svg
+├── edit-clear.svg
+├── folder-new.svg
+└── ...
+```
+
+Reference in QSS as: `url(:/uitheme/icons/your_icon.svg)`
+
+#### Our Build Process
+
+1. Reads color tokens from `themes/<name>.json`
+2. Substitutes placeholders in `stylesheet.qss.template` and `config.json.template`
+3. Compiles with Qt's `rcc` tool → `qt/<name>.qbtheme`
+
+#### Version Compatibility
+
+- **qBittorrent v4.6.0+** (Qt6) — Fully supported
+- **qBittorrent v4.3.0–4.5.x** (Qt5) — Compatible with `config.json` colors
+- **qBittorrent v4.2.2–4.2.5** — QSS only (no `config.json`)
+
+**Official Documentation**: [Create custom themes for qBittorrent](https://github.com/qbittorrent/qBittorrent/wiki/Create-custom-themes-for-qBittorrent)
 
 ### WebUI Themes
 
-**Format**: Regular file tree packed as `.tar.gz` or `.zip` (qbittorrent-nox requires regular files, no symlinks)
+#### Overview
 
-**Source Template** (`template/webui/`):
-- Based on qBittorrent's stock WebUI
-- Includes `private/css/theme.css.template` — theme override loaded **last** to ensure priority
+qBittorrent's WebUI (since **v4.1.0**) supports alternate WebUI implementations through external file directories. The architecture separates:
 
-**Theme CSS**:
-- Exposes CSS variables mapped from the same JSON color tokens:
-  - `--bg-primary`, `--fg-primary`, `--accent`
-  - Status colors: `--status-downloading`, `--status-paused`, etc.
-- Ensures visual consistency between WebUI and Qt client
+- **`public/`** — Login/authentication pages
+- **`private/`** — Main WebUI functionality (requires authentication)
 
-**Build Process** (`./gen.sh`):
-1. Copies `template/webui/` to a temporary directory
+This separation enhances security and allows customization without modifying qBittorrent itself.
+
+#### File Structure
+
+An alternate WebUI must replicate qBittorrent's [stock WebUI structure](https://github.com/qbittorrent/qBittorrent/tree/master/src/webui/www):
+
+```
+webui-mytheme/
+├── public/
+│   ├── index.html          # Login page
+│   ├── login.html
+│   └── images/             # Icons for login
+├── private/
+│   ├── index.html          # Main WebUI
+│   ├── css/
+│   │   ├── style.css
+│   │   └── theme.css       # Our theme override
+│   ├── scripts/
+│   └── images/
+├── translations/
+└── webui.qrc
+```
+
+#### Our Theming Approach
+
+Instead of creating a full alternate WebUI, we **extend the stock WebUI** with a `theme.css` overlay:
+
+1. Copy the stock WebUI structure from `template/webui/`
+2. Add `private/css/theme.css.template` with CSS variables:
+   ```css
+   :root {
+       --bg-primary: %BG_PRIMARY%;
+       --fg-primary: %FG_PRIMARY%;
+       --accent: %ACCENT%;
+       --status-downloading: %STATUS_DOWNLOADING%;
+       /* ... */
+   }
+   
+   /* Override stock styles */
+   body { background: var(--bg-primary); color: var(--fg-primary); }
+   .toolbar { background: var(--bg-secondary); }
+   ```
+3. Load `theme.css` **last** in `index.html` to ensure overrides take precedence
+4. Render tokens from `themes/<name>.json` and pack as `.tar.gz`/`.zip`
+
+#### Installation
+
+Users extract the archive and configure qBittorrent:
+
+1. **Tools → Options → Web UI**
+2. Enable **"Use alternative Web UI"**
+3. Set **"Files location"** to the extracted directory
+4. Save and reload
+
+**Note**: qbittorrent-nox requires **regular files** (no symlinks) due to security restrictions.
+
+#### Customization
+
+- **Colors**: Edit `theme.css.template` CSS variables
+- **Icons**: Replace files in `public/images/` and `private/images/`
+- **Layout**: Modify HTML/CSS in `private/` (advanced)
+
+#### Build Process
+
+Our `gen.sh` script:
+
+1. Copies `template/webui/` to temp directory
 2. Renders `theme.css` from `theme.css.template` using JSON color tokens
-3. Creates archives: `webui/<name>.tar.gz` (and `.zip` if available)
+3. Creates archives: `webui/webui-<name>.tar.gz` (and `.zip`)
 
-**Customization**:
-- **Icons**: Replace files in `private/images/` with same filenames
-- **Additional CSS**: Edit `theme.css.template` and rebuild
+**Official Documentation**: [Developing alternate WebUIs](https://github.com/qbittorrent/qBittorrent/wiki/Developing-alternate-WebUIs-(WIP))
 
 ### Creating a New Theme
 
