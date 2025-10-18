@@ -20,14 +20,24 @@
    3. Restart qbittorrent to apply theme.
 
 ### Screenshots
+
+> dark.qbtheme
+![qbittorrent dark theme](assets/qt-dark.webp)
+
 > dracula.qbtheme
-![qbittorrent dracula theme](screenshots/client.dracula.png)
+![qbittorrent dracula theme](assets/qt-dracula.webp)
+
+> solarized-dark.qbtheme
+![qbittorrent solarized-dark theme](assets/qt-solarized-dark.webp)
+
+> solarized-light.qbtheme
+![qbittorrent solarized-light theme](assets/qt-solarized-light.webp)
 
 > gruvbox-dark.qbtheme
-![qbittorrent gruvbox theme](screenshots/client.gruvbox.png)
+![qbittorrent gruvbox-dark theme](assets/qt-gruvbox-dark.webp)
 
-> onedark.qbtheme
-![qbittorrent onedark theme](screenshots/client.onedark.png)
+> gruvbox-light.qbtheme
+![qbittorrent gruvbox-light theme](assets/qt-gruvbox-light.webp)
 
 ### Theme Development
 [How to create your theme? - Reference](https://github.com/qbittorrent/qBittorrent/wiki/Create-custom-themes-for-qBittorrent)
