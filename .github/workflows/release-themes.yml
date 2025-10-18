@@ -1,0 +1,70 @@
+name: release-themes
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build deps (jq, zip, Qt rcc)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq zip qtbase5-dev-tools
+          # Ensure Qt5 rcc is on PATH on Ubuntu
+          if [ -d "/usr/lib/qt5/bin" ]; then
+            echo "/usr/lib/qt5/bin" >> "$GITHUB_PATH"
+          fi
+          rcc -v || true
+
+      - name: Build all themes
+        run: |
+          chmod +x ./gen.sh
+          ./gen.sh
+
+      - name: List results
+        run: |
+          ls -la qt || true
+          ls -la webui || true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: themes
+          if-no-files-found: error
+          path: |
+            qt/*.qbtheme
+            webui/*.tar.gz
+            webui/*.zip
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: themes
+          path: dist
+
+      - name: Create GitHub Release and upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/qt/*.qbtheme
+            dist/webui/*.tar.gz
+            dist/webui/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

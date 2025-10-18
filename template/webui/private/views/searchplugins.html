@@ -1,0 +1,206 @@
+<style>
+    #searchPluginsContainer {
+        height: calc(100% - 20px);
+        margin: 10px;
+        overflow: auto;
+    }
+
+    #searchPluginsContainer button {
+        padding: 3px;
+    }
+
+    #searchPluginsContainer span {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #searchPluginsTable {
+        width: 100%;
+        height: calc(100% - 135px);
+    }
+
+    #searchPluginsTable .dynamicTable {
+        width: 100%;
+    }
+
+    #searchPluginsTableDiv {
+        height: calc(100% - 26px);
+    }
+
+    #dynamicTableFixedHeaderDiv {
+        height: 26px;
+    }
+
+    #searchPlugins_content {
+        height: 100%;
+    }
+
+</style>
+
+<div id="searchPluginsContainer">
+    <h2>QBT_TR(Installed search plugins:)QBT_TR[CONTEXT=PluginSelectDlg]</h2>
+
+    <div id="searchPluginsTable">
+        <div id="searchPluginsTableFixedHeaderDiv" class="dynamicTableFixedHeaderDiv">
+            <table class="dynamicTable unselectable" style="position:relative;">
+                <thead>
+                    <tr class="dynamicTableHeader" id="searchPluginsTableFixedHeaderRow"></tr>
+                </thead>
+            </table>
+        </div>
+        <div id="searchPluginsTableDiv" class="dynamicTableDiv">
+            <table class="dynamicTable unselectable">
+                <thead>
+                    <tr class="dynamicTableHeader"></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <span>QBT_TR(Warning: Be sure to comply with your country's copyright laws when downloading torrents from any of these search engines.)QBT_TR[CONTEXT=PluginSelectDlg]</span>
+    <span style="font-style: italic;">QBT_TR(You can get new search engine plugins here:)QBT_TR[CONTEXT=PluginSelectDlg] <a href="https://plugins.qbittorrent.org" target="_blank">https://plugins.qbittorrent.org</a></span>
+    <div style="width: 100%; margin-top: 10px;">
+        <button type="button" style="width: 33%; line-height: 1.4em;" onclick="qBittorrent.SearchPlugins.installPlugin();">QBT_TR(Install new plugin)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+        <button type="button" style="width: 33%; line-height: 1.4em;" onclick="qBittorrent.SearchPlugins.checkForUpdates();">QBT_TR(Check for updates)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+        <button type="button" style="width: 32%; line-height: 1.4em;" onclick="window.qBittorrent.Client.closeWindow(document.getElementById('searchPlugins'));">QBT_TR(Close)QBT_TR[CONTEXT=PluginSelectDlg]</button>
+    </div>
+</div>
+
+<ul id="searchPluginsTableMenu" class="contextMenu">
+    <li><a href="#Enabled"><img src="images/checked-completed.svg" alt="QBT_TR(Enabled)QBT_TR[CONTEXT=PluginSelectDlg]"> QBT_TR(Enabled)QBT_TR[CONTEXT=PluginSelectDlg]</a></li>
+    <li class="separator"><a href="#Uninstall"><img src="images/list-remove.svg" alt="QBT_TR(Uninstall)QBT_TR[CONTEXT=PluginSelectDlg]"> QBT_TR(Uninstall)QBT_TR[CONTEXT=PluginSelectDlg]</a></li>
+</ul>
+
+<script>
+    "use strict";
+
+    window.qBittorrent ??= {};
+    window.qBittorrent.SearchPlugins ??= (() => {
+        const exports = () => {
+            return {
+                setup: setup,
+                installPlugin: installPlugin,
+                checkForUpdates: checkForUpdates,
+                updateTable: updateTable
+            };
+        };
+
+        let searchPluginsTable;
+        let searchPluginsTableContextMenu;
+        let prevOffsetLeft;
+        let prevOffsetTop;
+
+        const setup = () => {
+            searchPluginsTable = new window.qBittorrent.DynamicTable.SearchPluginsTable();
+            searchPluginsTableContextMenu = new window.qBittorrent.ContextMenu.SearchPluginsTableContextMenu({
+                targets: "#searchPluginsTableDiv tbody tr",
+                menu: "searchPluginsTableMenu",
+                actions: {
+                    Enabled: enablePlugin,
+                    Uninstall: uninstallPlugin
+                },
+                offsets: calculateContextMenuOffsets()
+            });
+            searchPluginsTable.setup("searchPluginsTableDiv", "searchPluginsTableFixedHeaderDiv", searchPluginsTableContextMenu);
+
+            searchPluginsTable.dynamicTableDiv.addEventListener("dblclick", (e) => { enablePlugin(); });
+            searchPluginsTable.dynamicTableDiv.addEventListener("contextmenu", (e) => {
+                updateSearchPluginsTableContextMenuOffset();
+            }, true);
+
+            updateTable();
+        };
+
+        const installPlugin = (path) => {
+            new MochaUI.Window({
+                id: "installSearchPlugin",
+                icon: "images/qbittorrent-tray.svg",
+                title: "QBT_TR(Install plugin)QBT_TR[CONTEXT=PluginSourceDlg]",
+                loadMethod: "xhr",
+                contentURL: "views/installsearchplugin.html?v=${CACHEID}",
+                scrollbars: false,
+                resizable: false,
+                maximizable: false,
+                paddingVertical: 0,
+                paddingHorizontal: 0,
+                width: window.qBittorrent.Dialog.limitWidthToViewport(500),
+                height: 120
+            });
+        };
+
+        const uninstallPlugin = () => {
+            fetch("api/v2/search/uninstallPlugin", {
+                method: "POST",
+                body: new URLSearchParams({
+                    names: searchPluginsTable.selectedRowsIds().join("|")
+                })
+            });
+        };
+
+        const enablePlugin = () => {
+            const plugins = searchPluginsTable.selectedRowsIds();
+            let enable = true;
+            if (plugins && plugins.length)
+                enable = !window.qBittorrent.Search.getPlugin(plugins[0]).enabled;
+
+            fetch("api/v2/search/enablePlugin", {
+                method: "POST",
+                body: new URLSearchParams({
+                    names: plugins.join("|"),
+                    enable: enable
+                })
+            });
+        };
+
+        const checkForUpdates = () => {
+            fetch("api/v2/search/updatePlugins", {
+                method: "POST"
+            });
+        };
+
+        const calculateContextMenuOffsets = () => {
+            prevOffsetLeft = document.getElementById("searchPlugins").getBoundingClientRect().left;
+            prevOffsetTop = document.getElementById("searchPlugins").getBoundingClientRect().top;
+
+            return {
+                x: -prevOffsetLeft,
+                y: -prevOffsetTop
+            };
+        };
+
+        const updateSearchPluginsTableContextMenuOffset = () => {
+            // only re-calculate if window has moved
+            if ((prevOffsetLeft !== document.getElementById("searchPlugins").getBoundingClientRect().left) || (prevOffsetTop !== document.getElementById("searchPlugins").getBoundingClientRect().top))
+                searchPluginsTableContextMenu.options.offsets = calculateContextMenuOffsets();
+        };
+
+        const updateTable = () => {
+            const oldPlugins = [...searchPluginsTable.getRowIds()];
+            // remove old rows from the table
+            for (const oldPlugin of oldPlugins) {
+                let found = false;
+                for (let j = 0; j < window.qBittorrent.Search.searchPlugins.length; ++j) {
+                    if (window.qBittorrent.Search.searchPlugins[j].name === oldPlugin) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                    searchPluginsTable.removeRow(oldPlugin);
+            }
+
+            for (let i = 0; i < window.qBittorrent.Search.searchPlugins.length; ++i) {
+                window.qBittorrent.Search.searchPlugins[i].rowId = window.qBittorrent.Search.searchPlugins[i].name;
+                searchPluginsTable.updateRowData(window.qBittorrent.Search.searchPlugins[i]);
+            }
+
+            searchPluginsTable.updateTable();
+        };
+
+        return exports();
+    })();
+    Object.freeze(window.qBittorrent.SearchPlugins);
+
+    window.qBittorrent.SearchPlugins.setup();
+</script>

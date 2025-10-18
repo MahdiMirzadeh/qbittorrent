@@ -1,0 +1,358 @@
+/*
+
+Core.css for Mocha UI
+
+Theme: Default
+
+Copyright:
+	Copyright (c) 2007-2009 Greg Houston, <http://greghoustondesign.com/>.
+
+License:
+	MIT-style license.
+
+Required by:
+	Layout.js
+
+*/
+
+/* Layout
+---------------------------------------------------------------- */
+
+#desktop {
+    cursor: default; /* Fix for issue in IE7. IE7 wants to use the I-bar text cursor */
+    height: 100%;
+    min-height: 100%;
+    min-width: 400px; /* Helps keep header content from wrapping */
+    overflow: hidden;
+    position: relative;
+}
+
+#topNav {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 13px 10px 0 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+#topNav a {
+    font-weight: normal;
+}
+
+#topNav a:hover {
+    text-decoration: none;
+}
+
+/* Navbar */
+
+#desktopNavbar {
+    background-color: var(--color-background-default);
+    overflow: hidden; /* Remove this line if you want the menu to be backward compatible with Firefox 2 */
+}
+
+#desktopNavbar ul {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+#desktopNavbar > ul > li {
+    float: left;
+}
+
+#desktopNavbar a {
+    display: block;
+}
+
+#desktopNavbar ul li a {
+    color: var(--color-text-default);
+    font-weight: normal;
+    padding: 4px 10px;
+}
+
+#desktopNavbar ul li a:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-white);
+}
+
+#desktopNavbar a:hover img {
+    filter: var(--color-icon-hover);
+}
+
+#desktopNavbar ul li a.arrow-right::after,
+#desktopNavbar ul li a:hover.arrow-right::after {
+    border: solid currentcolor;
+    border-width: 0 2px 2px 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+#desktopNavbar li ul {
+    background-color: var(--color-background-default);
+    border: 1px solid var(--color-border-default);
+    left: -999em;
+    position: absolute;
+    z-index: 8000;
+}
+
+#desktopNavbar li:hover ul ul,
+#desktopNavbar li.ieHover ul ul,
+#desktopNavbar li:hover ul ul ul,
+#desktopNavbar li.ieHover ul ul ul {
+    left: -999em;
+}
+
+#desktopNavbar li ul ul {
+    /* third-and-above-level lists */
+    margin: -22px 0 0 163px;
+}
+
+#desktopNavbar li ul li .check {
+    font-size: 1px;
+    height: 5px;
+    left: 6px;
+    line-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 5px;
+}
+
+#desktopNavbar li ul li a,
+#desktopNavbar li ul li div.anchor {
+    color: var(--color-text-default);
+    font-weight: normal;
+    min-width: 155px;
+    padding: 4px 10px 4px 23px;
+    position: relative;
+}
+
+#desktopNavbar li ul li a:hover,
+#desktopNavbar li ul li div.anchor:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-white);
+}
+
+/* lists nested under hovered list items */
+#desktopNavbar li:hover ul,
+#desktopNavbar li.ieHover ul,
+#desktopNavbar li li.ieHover ul,
+#desktopNavbar li li li.ieHover ul,
+#desktopNavbar li li:hover ul,
+#desktopNavbar li li li:hover ul {
+    left: auto;
+}
+
+/* For IE7 */
+#desktopNavbar li:hover {
+    position: static;
+}
+
+li.divider {
+    border-top: 1px solid var(--color-border-default);
+    margin-top: 2px;
+    padding-top: 3px;
+}
+
+#pageWrapper {
+    border-bottom: 1px solid var(--color-border-default);
+    border-top: 1px solid var(--color-border-default);
+    overflow: hidden; /* This can be set to hidden or auto */
+    position: relative;
+}
+
+#propertiesPanel_header {
+    height: 28px;
+}
+
+/* Footer */
+
+#desktopFooterWrapper {
+    bottom: 0;
+    height: 28px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+#desktopFooter {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    height: 28px;
+    padding: 2px;
+}
+
+/* Panel Layout
+---------------------------------------------------------------- */
+
+/* Columns */
+
+.column {
+    float: left;
+    overflow: hidden; /* Required by IE6 */
+    position: relative;
+}
+
+/* Panels */
+
+.panel {
+    border-bottom: 1px solid var(--color-border-default);
+    overflow: auto;
+    position: relative;
+}
+
+.panelWrapper.collapsed .panel-header {
+    border-bottom: 0;
+}
+
+.bottomPanel {
+    border-bottom: 0;
+}
+
+.pad {
+    height: 100%;
+    padding: 8px;
+}
+
+.panel-header {
+    border-bottom: 1px solid var(--color-border-default);
+    overflow: hidden;
+    position: relative;
+}
+
+.panel-headerContent {
+    padding-top: 2px;
+}
+
+.panel-header h2 {
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    overflow: hidden;
+    padding: 3px 8px 0;
+}
+
+.panel-collapse {
+    background: url("../images/collapse.svg") center/16px no-repeat;
+}
+
+.panel-expand {
+    background: url("../images/collapse.svg") center/16px no-repeat;
+    transform: rotate(180deg);
+}
+
+.icon16 {
+    cursor: pointer;
+    margin: 4px 0 0 2px;
+}
+
+/* Column and Panel Handles */
+
+.horizontalHandle {
+    font-size: 1px;
+    height: 4px;
+    line-height: 1px;
+    overflow: hidden;
+}
+
+.horizontalHandle.detached .handleIcon {
+    background: transparent;
+}
+
+.horizontalHandle .handleIcon {
+    background: url("../images/handle-icon-horizontal.svg") center center
+        no-repeat;
+    height: 6px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.columnHandle {
+    background: url("../images/handle-icon.svg") center center no-repeat;
+    border: 1px solid var(--color-border-default);
+    border-bottom: 0;
+    border-top: 0;
+    float: left;
+    min-height: 10px;
+    overflow: hidden;
+    width: 8px;
+}
+
+/* Toolboxes */
+
+.toolbox {
+    float: right;
+    height: 24px;
+    margin-top: 1px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: right;
+}
+
+/* Have to specify div here for IE6's sake */
+div.toolbox.divider {
+    background: url("../images/toolbox-divider.svg") repeat-y;
+    padding-left: 8px;
+}
+
+.toolbox img.disabled {
+    cursor: default;
+}
+
+.iconWrapper {
+    border: 1px solid transparent;
+    display: inline-block;
+    height: 22px;
+    min-width: 22px;
+    overflow: hidden;
+}
+
+* html .iconWrapper {
+    border: 0;
+    padding: 1px;
+}
+
+.iconWrapper img {
+    cursor: pointer;
+    margin: 0;
+    padding: 3px;
+}
+
+.iconWrapper:hover {
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+}
+
+#spinner {
+    background: url("../images/spinner.svg") no-repeat;
+    display: none;
+    height: 16px;
+    width: 16px;
+}
+
+#desktopFooter td {
+    text-align: left;
+    vertical-align: top;
+}
+
+td.speedLabel {
+    cursor: pointer;
+    min-width: 18em;
+}
+
+#freeSpaceOnDisk {
+    white-space: nowrap;
+}
+
+#DHTNodes {
+    white-space: nowrap;
+}

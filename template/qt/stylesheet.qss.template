@@ -1,0 +1,796 @@
+/*
+  qBittorrent Theme Template
+  Modern template with semantic color variables
+*/
+
+QWidget {
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+  border: none;
+}
+
+QWidget:disabled {
+  color: %FG_DISABLED%;
+}
+
+/*
+  QMenuBar
+*/
+
+QMenuBar {
+  background: %BG_PRIMARY%;
+}
+
+QMenuBar::item {
+  padding: 5px 10px;
+  width: 100%;
+  color: %FG_PRIMARY%;
+}
+
+QMenuBar::item:selected {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+}
+
+QMenuBar::item:pressed {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+}
+
+/*
+  QMenu
+*/
+
+QMenu {
+  background: %BG_PRIMARY%;
+  border: 1px solid %BORDER%;
+}
+
+QMenu::item {
+  margin: 0;
+  padding: 5px 10px 5px 5px;
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+}
+
+QMenu::item:hover,
+QMenu::item:selected {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QMenu::separator {
+  background: %ACCENT%;
+  height: 1px;
+}
+
+QMenu::icon {
+  padding: 0 5px;
+}
+
+QMenu::indicator {
+  width: 16px;
+  height: 16px;
+  left: 5px;
+}
+
+QMenu::indicator:non-exclusive {
+  width: 16px;
+  height: 16px;
+  border: 1px solid %BORDER%;
+  background: %BG_PRIMARY%;
+  border-radius: 2px;
+}
+
+QMenu::indicator:non-exclusive:checked {
+  border-color: %ACCENT%;
+}
+
+/*
+  QToolBar
+*/
+
+QToolBar {
+  background: %BG_PRIMARY%;
+  border-top: 1px solid %BORDER%;
+  border-bottom: 1px solid %BORDER%;
+}
+
+QToolBar::separator {
+  background: %BORDER%;
+  width: 1px;
+}
+
+/*
+  QToolButton
+*/
+
+QToolButton {
+  border: none;
+  background: %BG_PRIMARY%;
+}
+
+QToolButton:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+  border: none;
+}
+
+QToolButton:pressed {
+  background: %BORDER%;
+  color: %BG_PRIMARY%;
+  padding: 0;
+}
+
+/*
+  QLineEdit in QToolBar
+*/
+
+QToolBar QLineEdit {
+  background: %BG_PRIMARY%;
+  margin: 0 5px;
+}
+
+/*
+  QSplitter
+*/
+
+QSplitter::handle {
+  background: %BG_SECONDARY%;
+}
+
+QSplitter::handle:horizontal {
+  width: 1px;
+}
+
+QSplitter::handle:vertical {
+  height: 1px;
+}
+
+QSplitter::handle:pressed {
+  background: %BORDER%;
+}
+
+/*
+  QMainWindow
+*/
+
+QMainWindow {
+  background: %BG_PRIMARY%;
+}
+
+/*
+  QFrame
+*/
+
+QFrame, QLabel {
+  outline: none;
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+}
+
+QLabel:disabled {
+  color: %FG_DISABLED%;
+}
+
+/*
+  QToolTip
+*/
+
+QToolTip {
+  padding: 5px;
+  background: %BG_PRIMARY%;
+  border: 2px solid %BORDER%;
+  color: %FG_PRIMARY%;
+}
+
+/*
+  QTabWidget
+*/
+
+QTabWidget::pane {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  QTABBAR
+  top
+*/
+
+QTabBar {
+  qproperty-drawBase: 0;
+}
+
+QTabBar::tab:top {
+  background: %TAB_BG%;
+  color: %FG_PRIMARY%;
+  margin: 0 2px 0 0;
+  padding: 6px 10px;
+  border: 1px solid %TAB_BORDER%;
+  border-bottom: 2px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+QTabBar::tab:top:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QTabBar::tab:top:selected {
+  background: %TAB_BG_SELECTED%;
+  color: %ACCENT%;
+  border-bottom: 2px solid %TAB_INDICATOR%;
+}
+
+/*
+  QListView
+*/
+QListView {
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+  border: none;
+}
+
+QListView::item {
+  padding: 5px;
+}
+
+QListView::item:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QListView::item:selected:active {
+  outline: none;
+  background: %BG_SELECTED%;
+  color: %FG_PRIMARY%;
+  padding: 5px;
+}
+
+QListView::item:selected:!active {
+  background: %BG_SELECTED%;
+  color: %FG_PRIMARY%;
+  padding: 5px;
+}
+
+/* Ensure consistent selection visuals across item views */
+QTreeView, QTableView, QListView {
+  selection-background-color: %BG_SELECTED%;
+  selection-color: %FG_PRIMARY%;
+}
+
+/*
+  QTableView
+*/
+
+QTableView {
+  background: %BG_TABLE%;
+  border: none;
+}
+
+QTableView QLabel {
+  padding: 0 5px;
+}
+
+QTableView QCheckBox, QTableView QLabel {
+  padding: 0 5px;
+}
+
+/*
+  QTreeView
+*/
+
+QTreeView {
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+  border: none;
+}
+
+QTreeView::item {
+  padding: 5px;
+  border: none;
+}
+
+QTreeView::item:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QTreeView::item:pressed {
+  background: %BG_SELECTED%;
+  color: %FG_PRIMARY%;
+  padding: 5px;
+}
+
+QTreeView::item:selected {
+  background: %BG_SELECTED%;
+  color: %FG_PRIMARY%;
+  padding: 5px;
+}
+
+QTreeView:disabled {
+  color: %FG_DISABLED%;
+}
+
+QAbstractItemView {
+  alternate-background-color: %BG_PRIMARY%;
+}
+
+/*
+  QStatusBar
+*/
+
+QStatusBar {
+  background: %BG_PRIMARY%;
+  border-top: 1px solid %BORDER%;
+}
+
+/*
+  QProgressBar
+*/
+
+QProgressBar {
+  text-align: center;
+  background: %BG_PROGRESS%;
+  border: 1px solid %BORDER%;
+  border-radius: 2px;
+  color: %FG_PRIMARY%;
+}
+
+QProgressBar::chunk {
+  background: %ACCENT%;
+  border-radius: 2px;
+}
+
+QProgressBar::chunk:disabled {
+  background: %FG_DISABLED%;
+}
+
+/*
+  QSlider
+*/
+QSlider::groove:horizontal {
+  height: 4px;
+  background: %BG_SECONDARY%;
+  border-radius: 2px;
+}
+QSlider::handle:horizontal {
+  width: 12px;
+  height: 12px;
+  margin: -4px 0;
+  background: %ACCENT%;
+  border: 1px solid %BUTTON_BORDER%;
+  border-radius: 6px;
+}
+QSlider::groove:vertical {
+  width: 4px;
+  background: %BG_SECONDARY%;
+  border-radius: 2px;
+}
+QSlider::handle:vertical {
+  width: 12px;
+  height: 12px;
+  margin: 0 -4px;
+  background: %ACCENT%;
+  border: 1px solid %BUTTON_BORDER%;
+  border-radius: 6px;
+}
+
+/*
+  QScrollBar / horizontal
+*/
+
+QScrollBar:horizontal {
+  background: %BG_PRIMARY%;
+  margin: 0px 5px;
+}
+
+QScrollBar::handle:horizontal {
+  background: %BG_SECONDARY%;
+  width: 5px;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal
+{
+  background: %BG_PRIMARY%;
+  width: 5px;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal {
+  subcontrol-position: right;
+}
+
+QScrollBar::sub-line:horizontal {
+  subcontrol-position: left;
+}
+
+QScrollBar:left-arrow:horizontal,
+QScrollBar::right-arrow:horizontal
+{
+  width: 0px;
+  height: 0px;
+  background: %FG_PRIMARY%;
+}
+
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal
+{
+  background: none;
+}
+
+/*
+  QScrollBar / vertical
+*/
+
+QScrollBar:vertical {
+  background: %BG_PRIMARY%;
+  margin: 5px 0;
+}
+
+QScrollBar::handle:vertical {
+  background: %BG_SECONDARY%;
+  height: 5px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical
+{
+  background: %BG_PRIMARY%;
+  height: 5px;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical {
+  subcontrol-position: bottom;
+}
+
+QScrollBar::sub-line:vertical {
+  subcontrol-position: top;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical
+{
+  background: none;
+}
+
+/*
+  QPushButton
+*/
+
+QPushButton,
+QPushButton:enabled
+{
+  padding: 6px 10px;
+  background: %BUTTON_BG%;
+  color: %BUTTON_FG%;
+  border: 1px solid %BUTTON_BORDER%;
+  border-radius: 3px;
+}
+
+QPushButton:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+  border-color: %ACCENT%;
+}
+
+QPushButton:focus {
+  outline: none;
+  border-color: %ACCENT%;
+}
+
+QPushButton:pressed {
+  background: %BUTTON_BG_PRESSED%;
+  border-color: %BUTTON_BORDER_PRESSED%;
+  color: %BUTTON_FG%;
+}
+
+/* Default (primary) buttons */
+QPushButton:default {
+  background: %BUTTON_PRIMARY_BG%;
+  color: %BUTTON_PRIMARY_FG%;
+  border-color: %BUTTON_PRIMARY_BORDER%;
+}
+QPushButton:default:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+QPushButton:default:pressed {
+  background: %BUTTON_PRIMARY_BG_PRESSED%;
+}
+
+QPushButton:checked {
+  background: %TAB_BG_SELECTED%;
+  border-color: %TAB_INDICATOR%;
+  color: %ACCENT%;
+}
+
+QPushButton:disabled {
+  background: %BUTTON_BG_DISABLED%;
+  color: %BUTTON_FG_DISABLED%;
+  border-color: %BORDER%;
+}
+
+/*
+  QLineEdit
+*/
+
+QLineEdit,
+QLineEdit:read-only
+{
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+  border: none;
+  padding: 4px;
+}
+
+QLineEdit:disabled,
+QLineEdit:disabled:read-only
+{
+  color: %BG_SECONDARY%;
+}
+
+/*
+  QHeaderView
+*/
+
+QHeaderView::section {
+  background: %BG_HEADER%;
+  padding: 0 5px;
+  color: %FG_PRIMARY%;
+  border: 1px solid %BORDER%;
+  border-left: none;
+}
+
+QHeaderView::section:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QHeaderView::section:first {
+  border-left: 1px solid %BORDER%;
+}
+
+/*
+  QDialog
+*/
+
+QDialog {
+  background: %BG_PRIMARY%;
+  border: 1px solid %BORDER%;
+}
+
+QDialog QWidget {
+  background: %BG_PRIMARY%;
+  color: %FG_PRIMARY%;
+}
+
+QDialog QTextEdit, QDialog QPlainTextEdit {
+  background: %BG_DARK%;
+  border: 1px solid %BORDER%;
+  border-radius: 3px;
+  padding: 4px;
+  color: %FG_PRIMARY%;
+}
+
+QDialog QLabel {
+  background: transparent;
+  color: %FG_PRIMARY%;
+}
+
+/*
+  Preferences sidebar (QListWidget inside dialogs)
+  Modern redesign with enhanced visual hierarchy
+*/
+QDialog QListWidget {
+  background: %SIDEBAR_BG%;
+  color: %SIDEBAR_FG%;
+  border: none;
+  border-right: 2px solid %SIDEBAR_BORDER%;
+  outline: none;
+  padding: 12px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  spacing: 12px;
+}
+
+QDialog QListWidget::item {
+  min-height: 80px;
+  padding: 8px 20px;
+  margin: 2px;
+  border-radius: 15px;
+  background: %BG_SECONDARY%;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: %SIDEBAR_FG%;
+}
+
+QDialog QListWidget::item:hover {
+  background: %BG_MID%;
+  color: %FG_PRIMARY%;
+}
+
+QDialog QListWidget::item:selected {
+  background: %SIDEBAR_SELECTED_BG%;
+  color: %ACCENT%;
+  border: 2px solid %ACCENT%;
+  font-weight: 600;
+}
+
+QDialog QTabWidget QTextEdit, QDialog QTabWidget QWidget {
+  background: %BG_PRIMARY%;
+  border-radius: 0;
+}
+
+QDialog QScrollBar:horizontal, QDialog QScrollBar:vertical {
+  background: %BG_TABLE%;
+}
+
+/*
+  QCheckbox / RadioButton
+*/
+
+QCheckBox, QRadioButton {
+  color: %FG_PRIMARY%;
+}
+
+QCheckBox:disabled, QRadioButton:disabled {
+  color: %FG_DISABLED%;
+}
+
+/* Simple checkbox with minimal custom styling to keep native checkmark */
+/* 
+  Checkbox & Radio Button Styling with embedded SVG icons
+*/
+QCheckBox::indicator, QGroupBox::indicator, QTreeView::indicator {
+  width: 17px;
+  height: 17px;
+}
+
+QCheckBox::indicator:unchecked, QGroupBox::indicator:unchecked, QTreeView::indicator:unchecked {
+  image: url(:/uitheme/icons/checkbox_unchecked.svg);
+}
+
+QCheckBox::indicator:checked, QGroupBox::indicator:checked, QTreeView::indicator:checked {
+  image: url(:/uitheme/icons/checkbox_checked.svg);
+}
+
+QCheckBox::indicator:indeterminate, QGroupBox::indicator:indeterminate, QTreeView::indicator:indeterminate {
+  image: url(:/uitheme/icons/checkbox_indeterminate.svg);
+}
+
+/*
+  QComboBox
+*/
+
+QComboBox {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+  padding: 4px;
+  border: 1px solid %BORDER%;
+  border-radius: 3px;
+}
+
+QComboBox:focus {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+}
+
+QComboBox:disabled {
+  color: %BG_SECONDARY%;
+}
+
+QComboBox:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+  border-color: %ACCENT%;
+}
+
+QComboBox:on {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+}
+
+QComboBox QAbstractItemView {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+  selection-background-color: %BG_PRIMARY%;
+  selection-color: %ACCENT%;
+  outline: none;
+}
+
+QComboBox QAbstractItemView::item:hover {
+  background: %BG_SECONDARY%;
+  color: %FG_PRIMARY%;
+}
+
+QComboBox::drop-down {
+  subcontrol-origin: margin;
+  subcontrol-position: top right;
+  width: 6ex;
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+  border-left: 1px solid %BORDER%;
+}
+
+/*
+  QSpinBox
+*/
+
+QSpinBox {
+  background: %BG_PRIMARY%;
+  color: %ACCENT%;
+  border: none;
+  padding: 4px;
+}
+
+QSpinBox:disabled {
+  color: %BG_SECONDARY%;
+}
+
+QSpinBox:focus {
+  background: %ACCENT%;
+  color: %BG_PRIMARY%;
+  border: 1px solid %ACCENT%;
+}
+
+/*
+  QGroupBox
+*/
+
+QGroupBox {
+  background: %BG_PRIMARY%;
+  border: 1px solid %BORDER%;
+  padding: 6px;
+  margin-top: 14px;
+  border-radius: 4px;
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  left: 10px;
+  padding: 8px 5px 20px 5px;
+}
+
+QGroupBox QLabel {
+  color: %FG_PRIMARY%;
+}
+
+QGroupBox QCheckBox {
+  color: %FG_PRIMARY%;
+}
+
+QGroupBox::title:disabled {
+  color: %FG_DISABLED%;
+}
+
+/*
+  TransferListWidget - Torrent Status Colors
+*/
+
+TransferListWidget {
+  qproperty-downloadingStateForeground: %STATUS_DOWNLOADING%;
+  qproperty-forcedDownloadingStateForeground: %STATUS_DOWNLOADING%;
+  qproperty-downloadingMetadataStateForeground: %STATUS_DOWNLOADING%;
+  qproperty-allocatingStateForeground: %BG_SECONDARY%;
+  qproperty-stalledDownloadingStateForeground: %STATUS_STALLED%;
+  qproperty-stalledUploadingStateForeground: %STATUS_STALLED%;
+  qproperty-uploadingStateForeground: %STATUS_UPLOADING%;
+  qproperty-forcedUploadingStateForeground: %STATUS_UPLOADING%;
+  qproperty-pausedDownloadingStateForeground: %STATUS_PAUSED%;
+  qproperty-pausedUploadingStateForeground: %STATUS_PAUSED%;
+  qproperty-errorStateForeground: %STATUS_ERROR%;
+  qproperty-missingFilesStateForeground: %STATUS_ERROR%;
+  qproperty-queuedDownloadingStateForeground: %STATUS_QUEUED%;
+  qproperty-queuedUploadingStateForeground: %STATUS_QUEUED%;
+  qproperty-checkingDownloadingStateForeground: %STATUS_QUEUED%;
+  qproperty-checkingUploadingStateForeground: %STATUS_QUEUED%;
+  qproperty-checkingResumeDataStateForeground: %STATUS_QUEUED%;
+  qproperty-movingStateForeground: %STATUS_QUEUED%;
+  qproperty-unknownStateForeground: %STATUS_ERROR%;
+}

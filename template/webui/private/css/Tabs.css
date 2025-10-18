@@ -1,0 +1,68 @@
+/*
+
+Tabs.css for Mocha UI
+
+Theme: Default
+
+Copyright:
+	Copyright (c) 2007-2009 Greg Houston, <http://greghoustondesign.com/>.
+
+License:
+	MIT-style license.
+
+Required by:
+	Tabs.js
+
+*/
+
+/* Toolbar Tabs */
+
+.toolbarTabs {
+    overflow: visible;
+    user-select: none;
+}
+
+.tab-menu {
+    display: flex;
+    font-size: 11px;
+    list-style-type: none;
+    overflow-x: auto;
+    padding: 0;
+}
+
+.tab-menu li {
+    cursor: pointer;
+    flex: 0 0 auto;
+    float: left;
+}
+
+.tab-menu .selected img,
+.tab-menu li:hover img {
+    filter: var(--color-icon-hover);
+}
+
+.tab-menu li a {
+    align-items: center;
+    background-color: var(--color-background-default);
+    border-radius: 3px 3px 0 0;
+    color: var(--color-text-default);
+    display: flex;
+    gap: 5px;
+    margin-left: 6px;
+    padding: 5px 7px 3px;
+    text-align: center;
+}
+
+.tab-menu li:first-child a {
+    margin-left: 4px;
+}
+
+.tab-menu li:hover a {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-white);
+}
+
+.tab-menu li.selected a {
+    background-color: var(--color-background-blue);
+    color: var(--color-text-white);
+}

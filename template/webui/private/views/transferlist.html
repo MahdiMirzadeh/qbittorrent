@@ -1,0 +1,122 @@
+<div id="torrentsTableFixedHeaderDiv" class="dynamicTableFixedHeaderDiv">
+    <table class="dynamicTable unselectable" style="position:relative;">
+        <thead>
+            <tr class="dynamicTableHeader"></tr>
+        </thead>
+    </table>
+</div>
+
+<div id="torrentsTableDiv" class="dynamicTableDiv">
+    <table class="dynamicTable unselectable">
+        <thead>
+            <tr class="dynamicTableHeader"></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    "use strict";
+
+    window.qBittorrent ??= {};
+    window.qBittorrent.TransferList ??= (() => {
+        const exports = () => {
+            return {
+                setup: setup,
+                contextMenu: contextMenu,
+            };
+        };
+
+        // create a context menu
+        const contextMenu = new window.qBittorrent.ContextMenu.TorrentsTableContextMenu({
+            targets: "#torrentsTableDiv tbody tr",
+            menu: "torrentsTableMenu",
+            actions: {
+                start: (element, ref) => {
+                    startFN();
+                },
+                stop: (element, ref) => {
+                    stopFN();
+                },
+                forceStart: (element, ref) => {
+                    setForceStartFN();
+                },
+
+                delete: (element, ref) => {
+                    deleteSelectedTorrentsFN();
+                },
+
+                setLocation: (element, ref) => {
+                    setLocationFN();
+                },
+
+                rename: (element, ref) => {
+                    renameFN();
+                },
+                renameFiles: (element, ref) => {
+                    renameFilesFN();
+                },
+                queueTop: (element, ref) => {
+                    setQueuePositionFN("topPrio");
+                },
+                queueUp: (element, ref) => {
+                    setQueuePositionFN("increasePrio");
+                },
+                queueDown: (element, ref) => {
+                    setQueuePositionFN("decreasePrio");
+                },
+                queueBottom: (element, ref) => {
+                    setQueuePositionFN("bottomPrio");
+                },
+
+                downloadLimit: (element, ref) => {
+                    downloadLimitFN();
+                },
+                uploadLimit: (element, ref) => {
+                    uploadLimitFN();
+                },
+                shareRatio: (element, ref) => {
+                    shareRatioFN();
+                },
+
+                sequentialDownload: (element, ref) => {
+                    toggleSequentialDownloadFN();
+                },
+                firstLastPiecePrio: (element, ref) => {
+                    toggleFirstLastPiecePrioFN();
+                },
+
+                autoTorrentManagement: (element, ref) => {
+                    autoTorrentManagementFN();
+                },
+                forceRecheck: (element, ref) => {
+                    recheckFN();
+                },
+                forceReannounce: (element, ref) => {
+                    reannounceFN();
+                },
+
+                superSeeding: (element, ref) => {
+                    setSuperSeedingFN(!ref.getItemChecked("superSeeding"));
+                },
+
+                exportTorrent: (element, ref) => {
+                    exportTorrentFN();
+                }
+            },
+            offsets: {
+                x: 0,
+                y: 2
+            },
+        });
+
+        const setup = () => {
+            torrentsTable.setup("torrentsTableDiv", "torrentsTableFixedHeaderDiv", contextMenu, true);
+        };
+
+        return exports();
+    })();
+    Object.freeze(window.qBittorrent.TransferList);
+
+    window.qBittorrent.TransferList.setup();
+</script>

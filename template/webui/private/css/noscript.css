@@ -1,0 +1,8 @@
+#desktop {
+    display: none;
+}
+
+#noscript {
+    color: #ff0000;
+    text-align: center;
+}

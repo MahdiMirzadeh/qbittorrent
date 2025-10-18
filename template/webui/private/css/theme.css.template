@@ -1,0 +1,161 @@
+/*
+  qBittorrent WebUI Theme Template (overrides load last)
+  Tokens are substituted from theme JSON via gen.sh (same keys as Qt theme)
+*/
+
+:root {
+  /* Core palette */
+  --bg-primary: %BG_PRIMARY%;
+  --bg-secondary: %BG_SECONDARY%;
+  --bg-selected: %BG_SELECTED%;
+  --bg-table: %BG_TABLE%;
+  --bg-header: %BG_HEADER%;
+  --bg-progress: %BG_PROGRESS%;
+  --fg-primary: %FG_PRIMARY%;
+  --fg-disabled: %FG_DISABLED%;
+  --border: %BORDER%;
+  --accent: %ACCENT%;
+  --accent-dim: %ACCENT_DIM%;
+
+  /* Bridge WebUI variables to theme tokens for full coverage */
+  --color-accent-blue: %ACCENT%;
+  --color-text-blue: %ACCENT%;
+  --color-text-orange: %ACCENT%;
+  --color-text-red: %STATUS_ERROR%;
+  --color-text-green: %STATUS_DOWNLOADING%;
+  --color-text-white: %FG_BRIGHT%;
+  --color-text-disabled: %FG_DISABLED%;
+  --color-text-default: %FG_PRIMARY%;
+  --color-background-primary: %BG_PRIMARY%;
+  --color-background-blue: %ACCENT%;
+  --color-background-popup: %BG_PRIMARY%;
+  --color-background-default: %BG_SECONDARY%;
+  --color-background-hover: %BG_MID%;
+  --color-border-blue: %ACCENT%;
+  --color-border-default: %BORDER%;
+
+  /* Components */
+  --button-bg: %BUTTON_BG%;
+  --button-fg: %BUTTON_FG%;
+  --button-border: %BUTTON_BORDER%;
+  --button-bg-pressed: %BUTTON_BG_PRESSED%;
+  --button-border-pressed: %BUTTON_BORDER_PRESSED%;
+  --tab-indicator: %TAB_INDICATOR%;
+
+  /* Optional design tokens for consistency with Qt */
+  --radius: 3px;
+  --radius-lg: 6px;
+  --border-width: 1px;
+  --focus-ring: 0 0 0 2px color-mix(in srgb, var(--accent) 40%, transparent);
+  --font-ui: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+}
+
+/* Tracker state colors alignment */
+#torrentTrackersTableDiv tr {
+  --color-tracker-disabled: %FG_DISABLED%;
+  --color-tracker-not-contacted: %STATUS_STALLED%;
+  --color-tracker-working: %STATUS_DOWNLOADING%;
+  --color-tracker-updating: %ACCENT%;
+  --color-tracker-not-working: %STATUS_ERROR%;
+}
+
+html, body { background: var(--bg-primary) !important; color: var(--fg-primary) !important; font-family: var(--font-ui); }
+
+/* Global links */
+a { color: var(--accent) !important; }
+a:hover, a:focus { color: var(--accent-dim) !important; }
+
+/* Layout containers */
+#desktopHeader, #pageWrapper, .mocha, .panel, .window { background: var(--bg-primary) !important; color: var(--fg-primary) !important; }
+
+/* Top bars */
+#desktopNavbar, #mochaToolbar { background: var(--bg-header) !important; border-bottom: var(--border-width) solid var(--border) !important; }
+#desktopNavbar ul li > a, #mochaToolbar a { color: var(--fg-primary) !important; }
+#desktopNavbar ul li > a:hover, #mochaToolbar a:hover { color: var(--accent) !important; }
+
+/* Tabs */
+.tab-menu li a { color: var(--fg-primary) !important; }
+.tab-menu li.selected a { color: var(--accent) !important; border-bottom: 2px solid var(--tab-indicator) !important; }
+
+/* Sidebars and panels */
+#filtersSideBar, #PropertiesPanel, #rssPanel, #logPanel { background: var(--bg-primary) !important; color: var(--fg-primary) !important; border-color: var(--border) !important; }
+
+/* Tables */
+.table, table, #torrentsTable { background: var(--bg-table) !important; color: var(--fg-primary) !important; border-color: var(--border) !important; }
+.table thead th, #torrentsTable thead th { background: var(--bg-header) !important; color: var(--fg-primary) !important; border-color: var(--border) !important; }
+.table tr:hover, #torrentsTable tr:hover { background: var(--bg-secondary) !important; }
+.table tr.selected, #torrentsTable tr.selected { background: var(--bg-selected) !important; color: var(--fg-primary) !important; }
+.table td, .table th, #torrentsTable td, #torrentsTable th { border-color: var(--border) !important; }
+
+/* Context menus */
+.contextMenu, .contextMenu ul, #desktopNavbar ul ul { background: var(--bg-primary) !important; border: var(--border-width) solid var(--border) !important; color: var(--fg-primary) !important; }
+.contextMenu a, #desktopNavbar ul ul a { color: var(--fg-primary) !important; }
+.contextMenu li:hover > a, #desktopNavbar ul ul li:hover > a { background: var(--bg-secondary) !important; color: var(--fg-primary) !important; }
+.contextMenu .separator, #desktopNavbar ul ul .divider { border-top: var(--border-width) solid var(--border) !important; }
+
+/* Buttons */
+button, .button, input[type="button"], input[type="submit"], .toolbar button, .toolbar .button {
+  background: var(--button-bg) !important;
+  color: var(--button-fg) !important;
+  border: var(--border-width) solid var(--button-border) !important;
+  border-radius: var(--radius) !important;
+}
+button:hover, .button:hover, input[type="button"]:hover, input[type="submit"]:hover { border-color: var(--accent) !important; }
+button:active, .button:active, input[type="button"]:active, input[type="submit"]:active { background: var(--button-bg-pressed) !important; border-color: var(--button-border-pressed) !important; }
+button:focus-visible, .button:focus-visible { outline: none !important; box-shadow: var(--focus-ring) !important; }
+button:disabled, .button:disabled, input[disabled] { color: var(--fg-disabled) !important; opacity: .6 !important; }
+
+/* Inputs */
+input, select, textarea { background: var(--bg-primary) !important; color: var(--fg-primary) !important; border: var(--border-width) solid var(--border) !important; border-radius: var(--radius) !important; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none !important; box-shadow: var(--focus-ring) !important; border-color: var(--accent) !important; }
+input::placeholder, textarea::placeholder { color: var(--fg-disabled) !important; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); }
+
+/* Progress */
+.progress, .piecebar, .progressbar { background: var(--bg-progress) !important; border: var(--border-width) solid var(--border) !important; }
+.progress .bar, .progressbar .bar { background: var(--accent) !important; }
+
+/* Status colors */
+tr.downloading, [data-state="downloading"], .status-downloading { color: var(--status-downloading) !important; }
+tr.uploading, [data-state="uploading"], .status-uploading { color: var(--status-uploading) !important; }
+tr.stalled, [data-state="stalled"], .status-stalled { color: var(--status-stalled) !important; }
+tr.paused, [data-state="paused"], .status-paused { color: var(--status-paused) !important; }
+tr.error, [data-state="error"], .status-error { color: var(--status-error) !important; }
+tr.queued, [data-state="queued"], .status-queued { color: var(--status-queued) !important; }
+
+/* Dividers & misc */
+hr { border-color: var(--border) !important; }
+
+/* Scrollbars (supported browsers) */
+* { scrollbar-color: var(--accent) var(--bg-secondary); }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: var(--bg-secondary); }
+*::-webkit-scrollbar-thumb { background: var(--accent); border-radius: var(--radius-lg); border: 2px solid var(--bg-secondary); }
+
+/* Mocha (dialog) overrides */
+.mochaOverlay, .mochaTitlebar, .mochaToolbarWrapper, .mochaContentWrapper, .mochaContentBorder {
+  background: var(--bg-primary) !important;
+  color: var(--fg-primary) !important;
+  border-color: var(--border) !important;
+}
+.mochaTitlebar { background: var(--bg-header) !important; }
+.mochaTitlebar h3 { color: var(--fg-primary) !important; }
+.mochaToolbarWrapper { background: var(--bg-header) !important; }
+
+/* Fieldsets in preferences */
+fieldset.settings { background: var(--bg-primary) !important; border: var(--border-width) solid var(--border) !important; }
+fieldset.settings legend { color: var(--fg-primary) !important; }
+fieldset.settings table, fieldset.settings td, fieldset.settings th { background: var(--bg-primary) !important; color: var(--fg-primary) !important; border-color: var(--border) !important; }
+
+/* Form controls */
+select option { background: var(--bg-primary); color: var(--fg-primary); }
+input[type="text"], input[type="number"], input[type="password"], textarea { background: var(--bg-primary) !important; color: var(--fg-primary) !important; }
+
+/* Toolbar tabs */
+#preferencesTabs li.selected a,
+.tab-menu li.selected a {
+  background: var(--bg-selected) !important;
+  color: var(--accent) !important;
+  border: var(--border-width) solid var(--border) !important;
+  border-bottom: 2px solid var(--tab-indicator) !important;
+}

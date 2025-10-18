@@ -1,0 +1,191 @@
+/**************************************************************
+
+    Dynamic Table
+    v 0.4
+
+**************************************************************/
+.altRowColors tbody tr:nth-child(odd of :not(.invisible)) {
+    background-color: var(--color-background-default);
+}
+
+#transferList .dynamicTable td {
+    padding: 2px;
+}
+
+.dynamicTableDiv table.dynamicTable tbody tr.selected {
+    background-color: var(--color-background-blue);
+    color: var(--color-text-white);
+}
+
+.dynamicTableDiv table.dynamicTable tbody tr:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-text-white);
+}
+
+#transferList .stateIcon,
+#torrentCreatorContentView .stateIcon {
+    background: left center / contain no-repeat;
+    margin-left: 3px;
+    padding-left: 1.65em;
+
+    &.stateIconColumn {
+        height: 14px;
+        margin: auto;
+        padding-left: 0;
+        width: 14px;
+    }
+
+    &.stateDownloading {
+        background-image: url("../images/downloading.svg");
+    }
+
+    &.stateUploading {
+        background-image: url("../images/upload.svg");
+    }
+
+    &.stateStalledUP {
+        background-image: url("../images/stalledUP.svg");
+    }
+
+    &.stateStalledDL {
+        background-image: url("../images/stalledDL.svg");
+    }
+
+    &.stateStoppedDL {
+        background-image: url("../images/stopped.svg");
+    }
+
+    &.stateStoppedUP {
+        background-image: url("../images/checked-completed.svg");
+    }
+
+    &.stateQueued {
+        background-image: url("../images/queued.svg");
+    }
+
+    &.stateChecking {
+        background-image: url("../images/force-recheck.svg");
+    }
+
+    &.stateMoving {
+        background-image: url("../images/set-location.svg");
+    }
+
+    &.stateError {
+        background-image: url("../images/error.svg");
+    }
+
+    &.stateRunning {
+        background-image: url("../images/torrent-start.svg");
+    }
+
+    &.stateUnknown {
+        background-image: none;
+    }
+}
+
+#transferList #transferList_pad {
+    /* override for default mocha inline style */
+    display: flex !important;
+}
+
+.dynamicTable {
+    border-spacing: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 1%;
+}
+
+.dynamicTable th {
+    border-right: 1px solid var(--color-border-default);
+    padding: 4px 2px;
+    white-space: nowrap;
+}
+
+.dynamicTable tr:hover {
+    cursor: pointer;
+}
+
+.dynamicTable tr:is(:hover, .selected) img:not(.flags) {
+    filter: var(--color-icon-hover);
+}
+
+.dynamicTable td {
+    padding: 4px 2px;
+    white-space: nowrap;
+}
+
+.dynamicTable th,
+.dynamicTable td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dynamicTable th.sorted {
+    background-image: url("../images/go-up.svg");
+    background-position: right 3px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+.dynamicTable th.sorted.reverse {
+    background-image: url("../images/go-down.svg");
+}
+
+.dynamicTable span.flags {
+    background: left center / contain no-repeat;
+    margin-left: 2px;
+    padding-left: 25px;
+}
+
+div:has(> div.dynamicTableFixedHeaderDiv):not(.invisible) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dynamicTableFixedHeaderDiv {
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#propertiesPanel .dynamicTableFixedHeaderDiv,
+#torrentsTableFixedHeaderDiv {
+    border-bottom: 1px solid var(--color-border-default);
+}
+
+.dynamicTableDiv {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.dynamicTableDiv thead th {
+    height: 0 !important;
+    line-height: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Trackers table */
+#torrentTrackersTableDiv tr:not(.selected, :hover) {
+    & .trackerDisabled {
+        color: var(--color-tracker-disabled);
+    }
+
+    & .trackerNotContacted {
+        color: var(--color-tracker-not-contacted);
+    }
+
+    & .trackerWorking {
+        color: var(--color-tracker-working);
+    }
+
+    & .trackerUpdating {
+        color: var(--color-tracker-updating);
+    }
+
+    & .trackerNotWorking {
+        color: var(--color-tracker-not-working);
+    }
+}

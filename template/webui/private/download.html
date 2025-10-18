@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="${LANG}" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QBT_TR(Add Torrent Links)QBT_TR[CONTEXT=DownloadFromURLDialog]</title>
+    <link rel="stylesheet" href="css/style.css?v=${CACHEID}" type="text/css">
+    <link rel="stylesheet" href="css/Window.css?v=${CACHEID}" type="text/css">
+    <script defer src="scripts/localpreferences.js?v=${CACHEID}"></script>
+    <script defer src="scripts/color-scheme.js?v=${CACHEID}"></script>
+    <script>
+        "use strict";
+
+        window.addEventListener("DOMContentLoaded", (event) => {
+            window.addEventListener("keydown", (event) => {
+                switch (event.key) {
+                    case "Escape":
+                        event.preventDefault();
+                        window.parent.qBittorrent.Client.closeFrameWindow(window);
+                        break;
+                }
+            });
+
+            document.getElementById("urls").focus();
+
+            const encodedUrls = new URLSearchParams(window.location.search).get("urls");
+            if (encodedUrls !== null) {
+                const urls = encodedUrls.split("|").map(decodeURIComponent);
+                if (urls.length > 0)
+                    document.getElementById("urls").value = urls.join("\n");
+            }
+
+            document.getElementById("submitButton").addEventListener("click", (e) => {
+                e.preventDefault();
+
+                const urls = document.getElementById("urls").value.split("\n").map(s => s.trim()).filter(s => (s.length > 0));
+                if (urls.length === 0)
+                    return;
+
+                for (const url of urls)
+                    window.parent.qBittorrent.Client.createAddTorrentWindow("QBT_TR(Magnet link)QBT_TR[CONTEXT=DownloadFromURLDialog]", url);
+
+                window.parent.qBittorrent.Client.closeFrameWindow(window);
+            });
+
+            window.addEventListener("keydown", (event) => {
+                switch (event.key) {
+                    case "Escape":
+                        event.preventDefault();
+                        window.parent.qBittorrent.Client.closeFrameWindow(window);
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <iframe id="download_frame" name="download_frame" class="invisible" title="" src="about:blank"></iframe>
+    <div style="text-align: center;">
+        <br>
+        <h2 class="vcenter">QBT_TR(Add torrent links)QBT_TR[CONTEXT=DownloadFromURLDialog]</h2>
+        <textarea id="urls" name="urls" rows="10" required style="width: 80%;" aria-label="QBT_TR(URLs)QBT_TR[CONTEXT=DownloadFromURLDialog]"></textarea>
+        <p><i>QBT_TR(One link per line (HTTP links, Magnet links and info-hashes are supported))QBT_TR[CONTEXT=DownloadFromURLDialog]</i></p>
+        <div id="submitbutton" style="margin-top: 12px; text-align: center;">
+            <button type="submit" id="submitButton">QBT_TR(Download)QBT_TR[CONTEXT=DownloadFromURLDialog]</button>
+        </div>
+    </div>
+</body>
+
+</html>
