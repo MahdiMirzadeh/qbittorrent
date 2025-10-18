@@ -7,9 +7,12 @@
 
 ### Usage
 1. Download your chosen theme:
-- [dracula](./dracula.qbtheme)
-- [gruvbox-dark](./gruvbox-dark.qbtheme)
-- [onedark](./onedark.qbtheme)
+- [dark](./qt/dark.qbtheme)
+- [dracula](./qt/dracula.qbtheme)
+- [solarized-dark](./qt/solarized-dark.qbtheme)
+- [solarized-light](./qt/solarized-light.qbtheme)
+- [gruvbox-dark](./qt/gruvbox-dark.qbtheme)
+- [gruvbox-light](./qt/gruvbox-light.qbtheme)
 
 2. Go to your qBittorrent application:
    1. Enable theme selection from menu. (Tools -> Options -> Behavior -> Interface -> Use custom UI Theme)
