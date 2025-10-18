@@ -74,8 +74,18 @@ a:hover, a:focus { color: var(--accent-dim) !important; }
 #desktopNavbar ul li > a:hover, #mochaToolbar a:hover { color: var(--accent) !important; }
 
 /* Tabs */
-.tab-menu li a { color: var(--fg-primary) !important; }
-.tab-menu li.selected a { color: var(--accent) !important; border-bottom: 2px solid var(--tab-indicator) !important; }
+.tab-menu li a { 
+  color: var(--fg-primary) !important; 
+  background: var(--button-bg) !important;
+}
+.tab-menu li a:hover { 
+  background: var(--bg-selected) !important;
+}
+.tab-menu li.selected a { 
+  color: var(--accent) !important; 
+  background: var(--bg-primary) !important;
+  border-bottom: 2px solid var(--tab-indicator) !important; 
+}
 
 /* Sidebars and panels */
 #filtersSideBar, #PropertiesPanel, #rssPanel, #logPanel { background: var(--bg-primary) !important; color: var(--fg-primary) !important; border-color: var(--border) !important; }
@@ -88,9 +98,9 @@ a:hover, a:focus { color: var(--accent-dim) !important; }
 .table td, .table th, #torrentsTable td, #torrentsTable th { border-color: var(--border) !important; }
 
 /* Context menus */
-.contextMenu, .contextMenu ul, #desktopNavbar ul ul { background: var(--bg-primary) !important; border: var(--border-width) solid var(--border) !important; color: var(--fg-primary) !important; }
-.contextMenu a, #desktopNavbar ul ul a { color: var(--fg-primary) !important; }
-.contextMenu li:hover > a, #desktopNavbar ul ul li:hover > a { background: var(--bg-secondary) !important; color: var(--fg-primary) !important; }
+.contextMenu, .contextMenu ul, #desktopNavbar ul ul { background: var(--bg-secondary) !important; border: var(--border-width) solid var(--border) !important; color: var(--fg-primary) !important; }
+.contextMenu a, #desktopNavbar ul ul a { color: var(--fg-primary) !important; text-decoration: none !important; }
+.contextMenu li:hover > a, #desktopNavbar ul ul li:hover > a { background: var(--bg-selected) !important; color: var(--fg-primary) !important; }
 .contextMenu .separator, #desktopNavbar ul ul .divider { border-top: var(--border-width) solid var(--border) !important; }
 
 /* Buttons */
@@ -151,10 +161,23 @@ fieldset.settings table, fieldset.settings td, fieldset.settings th { background
 select option { background: var(--bg-primary); color: var(--fg-primary); }
 input[type="text"], input[type="number"], input[type="password"], textarea { background: var(--bg-primary) !important; color: var(--fg-primary) !important; }
 
-/* Toolbar tabs */
+/* Toolbar tabs and buttons */
+#mochaToolbar a, #mochaToolbar button, #mochaToolbar .button,
+.toolbar a, .toolbar button, .toolbar .button {
+  background: var(--button-bg) !important;
+  color: var(--button-fg) !important;
+  border: var(--border-width) solid var(--button-border) !important;
+}
+#mochaToolbar a:hover, #mochaToolbar button:hover,
+.toolbar a:hover, .toolbar button:hover {
+  background: var(--bg-selected) !important;
+  border-color: var(--accent) !important;
+}
+#mochaToolbar a.selected, #mochaToolbar button.selected,
+.toolbar a.selected, .toolbar button.selected,
 #preferencesTabs li.selected a,
 .tab-menu li.selected a {
-  background: var(--bg-selected) !important;
+  background: var(--bg-primary) !important;
   color: var(--accent) !important;
   border: var(--border-width) solid var(--border) !important;
   border-bottom: 2px solid var(--tab-indicator) !important;
