@@ -59,12 +59,17 @@ jobs:
           name: themes
           path: dist
 
+      - name: Flatten artifact structure
+        run: |
+          mkdir -p release
+          find dist -name '*.qbtheme' -exec cp {} release/ \;
+          find dist -name '*.tar.gz' -exec cp {} release/ \;
+          find dist -name '*.zip' -exec cp {} release/ \;
+          ls -la release/
+
       - name: Create GitHub Release and upload assets
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            dist/qt/*.qbtheme
-            dist/webui/*.tar.gz
-            dist/webui/*.zip
+          files: release/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
