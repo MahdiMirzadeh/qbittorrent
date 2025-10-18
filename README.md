@@ -89,44 +89,41 @@ brew install jq qt
 
 ## 📸 Screenshots
 
-### Qt client
-- Dark
-![qt dark](assets/qt-dark.webp)
+### Dark
 
-- Dracula
-![qt dracula](assets/qt-dracula.webp)
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt dark](assets/qt-dark.webp) | ![webui dark](assets/webui-dark.webp) |
 
-- Gruvbox Dark
-![qt gruvbox dark](assets/qt-gruvbox-dark.webp)
+### Dracula
 
-- Solarized Dark
-![qt solarized dark](assets/qt-solarized-dark.webp)
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt dracula](assets/qt-dracula.webp) | ![webui dracula](assets/webui-dracula.webp) |
 
-- Gruvbox Light
-![qt gruvbox light](assets/qt-gruvbox-light.webp)
+### Gruvbox Dark
 
-- Solarized Light
-![qt solarized light](assets/qt-solarized-light.webp)
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt gruvbox-dark](assets/qt-gruvbox-dark.webp) | ![webui gruvbox-dark](assets/webui-gruvbox-dark.webp) |
 
-### WebUI
-- Dark
-![webui dark](assets/webui-dark.webp)
+### Solarized Dark
 
-- Dracula
-![webui dracula](assets/webui-dracula.webp)
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt solarized-dark](assets/qt-solarized-dark.webp) | ![webui solarized-dark](assets/webui-solarized-dark.webp) |
 
-- Gruvbox Dark
-![webui gruvbox dark](assets/webui-gruvbox-dark.webp)
+### Gruvbox Light
 
-- Solarized Dark
-![webui solarized dark](assets/webui-solarized-dark.webp)
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt gruvbox-light](assets/qt-gruvbox-light.webp) | ![webui gruvbox-light](assets/webui-gruvbox-light.webp) |
 
-- Gruvbox Light
-![webui gruvbox light](assets/webui-gruvbox-light.webp)
+### Solarized Light
 
-- Solarized Light
-![webui solarized light](assets/webui-solarized-light.webp)
-
+| Qt Client | WebUI |
+| --- | --- |
+| ![qt solarized-light](assets/qt-solarized-light.webp) | ![webui solarized-light](assets/webui-solarized-light.webp) |
 
 ## 🧑‍💻 Development
 
