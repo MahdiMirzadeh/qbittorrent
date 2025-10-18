@@ -109,7 +109,24 @@ brew install jq qt
 ![qt solarized light](assets/qt-solarized-light.webp)
 
 ### WebUI
-- (coming soon)
+- Dark
+![webui dark](assets/webui-dark.webp)
+
+- Dracula
+![webui dracula](assets/webui-dracula.webp)
+
+- Gruvbox Dark
+![webui gruvbox dark](assets/webui-gruvbox-dark.webp)
+
+- Solarized Dark
+![webui solarized dark](assets/webui-solarized-dark.webp)
+
+- Gruvbox Light
+![webui gruvbox light](assets/webui-gruvbox-light.webp)
+
+- Solarized Light
+![webui solarized light](assets/webui-solarized-light.webp)
+
 
 ## 🧑‍💻 Development
 
