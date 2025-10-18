@@ -1,119 +1,73 @@
-# QBittorrent Theme
-[qBittorrent](https://qbittorrent.org/) is a cross-platform free and open-source BitTorrent client.
+# qBittorrent Themes (Qt client + WebUI)
 
----
+Curated themes for qBittorrent. Each theme ships in two formats:
+- Qt desktop client: .qbtheme
+- WebUI (incl. qbittorrent-nox): tar.gz or zip archive
 
-## Application Theme (Client)
+## Downloads
 
-### Usage
-1. Download your chosen theme:
-- [dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.qbtheme)
-- [dracula](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.qbtheme)
-- [solarized-dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.qbtheme)
-- [solarized-light](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.qbtheme)
-- [gruvbox-dark](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.qbtheme)
-- [gruvbox-light](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.qbtheme)
+### WebUI themes
+- Dark: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.zip)
+- Dracula: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.zip)
+- Solarized Dark: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.zip)
+- Solarized Light: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.zip)
+- Gruvbox Dark: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.zip)
+- Gruvbox Light: [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.zip)
 
-2. Go to your qBittorrent application:
-   1. Enable theme selection from menu. (Tools -> Options -> Behavior -> Interface -> Use custom UI Theme)
-   2. In `UI Theme file` click on the file icon and in the file picker, select your `.qbtheme` file. 
-   3. Restart qbittorrent to apply theme.
+### Qt client themes (.qbtheme)
+- Dark: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.qbtheme
+- Dracula: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.qbtheme
+- Solarized Dark: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.qbtheme
+- Solarized Light: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.qbtheme
+- Gruvbox Dark: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.qbtheme
+- Gruvbox Light: https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.qbtheme
 
-### Screenshots
+## Install
 
-> dark.qbtheme
-![qbittorrent dark theme](assets/qt-dark.webp)
+### WebUI (Alternative Web UI)
+1) Download a WebUI archive (tar.gz or zip) from above and extract it to a folder, e.g. /opt/qbt-webui/dracula
+2) In qBittorrent: Tools → Options → Web UI → check “Use alternative Web UI” → set Files location to that folder → Save
+3) Reload the page. If you get “Unacceptable file type, only regular file is allowed”, disable the alternative UI via:
+   /api/v2/app/setPreferences?json=%7B%22alternative_webui_enabled%22:false%7D
 
-> dracula.qbtheme
-![qbittorrent dracula theme](assets/qt-dracula.webp)
+### Qt desktop (.qbtheme)
+Tools → Options → Behavior → Interface theme → choose the .qbtheme file → OK → restart qBittorrent
 
-> solarized-dark.qbtheme
-![qbittorrent solarized-dark theme](assets/qt-solarized-dark.webp)
+## Build locally
+Requirements: jq, Qt rcc (Qt5/Qt6).
+- Build all themes: ./gen.sh
+- Single theme: ./gen.sh themes/dracula.json
+Outputs:
+- qt/<theme>.qbtheme
+- webui/<theme>.tar.gz (and .zip if zip is available)
 
-> solarized-light.qbtheme
-![qbittorrent solarized-light theme](assets/qt-solarized-light.webp)
+## Screenshots
 
-> gruvbox-dark.qbtheme
-![qbittorrent gruvbox-dark theme](assets/qt-gruvbox-dark.webp)
+### Qt client
+- Dark
+  
+  ![qt dark](assets/qt-dark.webp)
+- Dracula
+  
+  ![qt dracula](assets/qt-dracula.webp)
+- Solarized Dark
+  
+  ![qt solarized dark](assets/qt-solarized-dark.webp)
+- Solarized Light
+  
+  ![qt solarized light](assets/qt-solarized-light.webp)
+- Gruvbox Dark
+  
+  ![qt gruvbox dark](assets/qt-gruvbox-dark.webp)
+- Gruvbox Light
+  
+  ![qt gruvbox light](assets/qt-gruvbox-light.webp)
 
-> gruvbox-light.qbtheme
-![qbittorrent gruvbox-light theme](assets/qt-gruvbox-light.webp)
+### WebUI
+- (coming soon)
 
-### Theme Development
-[How to create your theme? - Reference](https://github.com/qbittorrent/qBittorrent/wiki/Create-custom-themes-for-qBittorrent)
+## Notes
+- Themes are compatible with qBittorrent 4.6.0+ (Qt6). Older Qt5 builds generally work but visuals may differ slightly.
+- WebUI archives contain a theme.css override layered on top of the stock WebUI.
 
-This theme is added to [qbittorrent](https://github.com/qbittorrent/qBittorrent)'s wiki page on github. [Click Here](https://github.com/qbittorrent/qBittorrent/wiki/List-of-known-qBittorrent-themes)
-
-Qbittorrent theme is orginally a single '.qbtheme' file
-that you can select and use in qbittorrent preferences,
-which you need to compile a '.qrc' file with [rcc](https://doc.qt.io/qt-5/rcc.html).
-
-You can edit stylesheet.qss, config.json to start
-making your very own qbittorrent theme!
-
-My theme contains:
-
-| Name			| Desc				                          |
-| --------------------- |-----------------------------------|
-| resources.qrc		| Resources for compiling	          |
-| stylesheet.qss.in	| stylesheet's template		           |
-| config.json.in	| GUI colors template		             |
-| stylesheet.qss	| stylesheet (dracula by default)		 |
-| config.json		| GUI colors (dracula by default)		 |
-
-#### Compile
-Compiling this theme requires [rcc](https://doc.qt.io/qt-5/rcc.html).
-
-Now we can generate our theme:
-```
- $ rcc resources.qrc -o example.qbtheme -binary
-// resouces.qrc: list of the files
-// example.qbtheme: name of your theme
-```
-
-#### Theme Generator
-I've made [a script](./src/generate.sh), which uses your `~/.Xresources` file, in order to generate a QBittorrent theme file.
-```
- $ chmod +x generate.sh
- $ ./generate.sh
-// creates `example.qbtheme` from your `~/.Xresources`.
- $ ./generate.sh nord.qbtheme
-// creates `nord.qbtheme`.
-```
-
-#### TODO
-- [ ] theme generator should read colors from a file. Not the `~/.Xresources`. (since non-Xorg systems won't work, like wayland)
-- [ ] make better color implementation for stylesheet.
-
----
-
-## WebUI Theme (Server)
-
-### Usage
-
-1. Clone the repository:
-    ```
-    cd /opt
-    git clone https://github.com/MahdiMirzade/qbittorrent.git
-    chmod -R 777 qbittorrent
-    ```
-2. Enable theme selection from menu: → Tools → Options → Web UI → Use alternative Web UI.
-3. In 'Files locations' bar, you should type `/opt/qbittorrent/webui` .
-
-#### Troubleshooting WebUI Theme (Server)
-If you found you have put the file/folder in the wrong spot and get the error `Unacceptable file type, only regular file is allowed`
-* Append the following after the url/port in your browser and then refresh (this clears the webui setting back to disabled):
-```
-/api/v2/app/setPreferences?json=%7B%22alternative_webui_enabled%22:false%7D
-```
-
-### Screenshots
-![Screenshot WebUI](screenshots/webui.dracula.png)
-
-### Developement
-From qBittorrent v4.1.0 and on, the WebUI architecture was expanded to allow the use of alternate sets of WebUI sources, allowing customization of the WebUI and usage of community developed alternatives.
-
-In WebUI you are not going to produce a theme, you are going to modify the current core of the qBittorrent core, which I wrote a custom stylesheet to produce this WebUI, but you are not limited to this.
-This theme contains a `custom-webui.css` file that is basically the whole show, you may want to modify this file in `public/css` and `private/css` to change the theme and modify it on your own.
-
-For more information about WebUI developement [click here](https://github.com/qbittorrent/qBittorrent/wiki/Developing-alternate-WebUIs-(WIP)).
+License: see LICENSE. Credits to the qBittorrent project.
