@@ -1,4 +1,10 @@
-# qBittorrent Themes
+<h1 align="center">
+	Themes for <a href="https://github.com/qbittorrent/qBittorrent">qBittorrent</a>
+</h1>
+
+<p align="center">
+	<img src="assets/preview.webp"/>
+</p>
 
 Curated color themes for **qBittorrent**, available for both the Qt desktop client and WebUI (qbittorrent-nox). Each theme ships in two formats:
 
