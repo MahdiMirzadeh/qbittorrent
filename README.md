@@ -9,12 +9,12 @@ Curated color themes for **qBittorrent**, available for both the Qt desktop clie
 
 | Theme | Palette | Qt Client | WebUI |
 |-------|---------|-----------|-------|
-| **Dark** | ![Dark](assets/palette-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.zip) |
-| **Dracula** | ![Dracula](assets/palette-dracula.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.zip) |
-| **Gruvbox Dark** | ![Gruvbox Dark](assets/palette-gruvbox-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.zip) |
-| **Gruvbox Light** | ![Gruvbox Light](assets/palette-gruvbox-light.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.zip) |
-| **Solarized Dark** | ![Solarized Dark](assets/palette-solarized-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.zip) |
-| **Solarized Light** | ![Solarized Light](assets/palette-solarized-light.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.zip) |
+| **Dark** | ![Dark](assets/palette-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-dark.zip) |
+| **Dracula** | ![Dracula](assets/palette-dracula.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/dracula.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-dracula.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-dracula.zip) |
+| **Gruvbox Dark** | ![Gruvbox Dark](assets/palette-gruvbox-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-gruvbox-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-gruvbox-dark.zip) |
+| **Gruvbox Light** | ![Gruvbox Light](assets/palette-gruvbox-light.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/gruvbox-light.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-gruvbox-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-gruvbox-light.zip) |
+| **Solarized Dark** | ![Solarized Dark](assets/palette-solarized-dark.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-dark.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-solarized-dark.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-solarized-dark.zip) |
+| **Solarized Light** | ![Solarized Light](assets/palette-solarized-light.svg) | [.qbtheme](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/solarized-light.qbtheme) | [tar.gz](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-solarized-light.tar.gz) · [zip](https://github.com/MahdiMirzadeh/qbittorrent/releases/latest/download/webui-solarized-light.zip) |
 
 ## 🚀 Installation
 
@@ -24,7 +24,7 @@ Curated color themes for **qBittorrent**, available for both the Qt desktop clie
 2. Extract it to a directory:
    ```bash
    mkdir -p ~/.config/qbittorrent/webui
-   tar -xzf dracula.tar.gz -C ~/.config/qbittorrent/webui
+   tar -xzf webui-dracula.tar.gz -C ~/.config/qbittorrent/webui
    ```
 3. In qBittorrent:
    - Go to **Tools → Options → Web UI**

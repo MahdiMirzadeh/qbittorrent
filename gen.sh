@@ -181,8 +181,8 @@ EOF
     # Build WebUI archive if enabled
     if [ "$BUILD_WEBUI" = "1" ] && [ -d "$TEMPLATE_WEBUI_DIR" ] && [ -f "$TEMPLATE_WEBUI_DIR/private/css/theme.css.template" ]; then
         echo "  -> Building WebUI theme"
-        ARCHIVE_BASENAME=${THEME_NAME}
         ARCHIVE_ROOT_NAME=webui-${THEME_NAME}
+        ARCHIVE_BASENAME=${ARCHIVE_ROOT_NAME}
 
         TMP_WEBUI_BASE=$(mktemp -d 2>/dev/null || mktemp -d -t qbt_webui.XXXXXX)
         TMP_WEBUI_DIR="$TMP_WEBUI_BASE/$ARCHIVE_ROOT_NAME"
