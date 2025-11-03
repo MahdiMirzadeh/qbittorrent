@@ -711,10 +711,17 @@ QComboBox QAbstractItemView::item:hover {
 QComboBox::drop-down {
   subcontrol-origin: margin;
   subcontrol-position: top right;
-  width: 6ex;
+  width: 20px;
   background: %BG_PRIMARY%;
-  color: %ACCENT%;
   border-left: 1px solid %BORDER%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+  image: url(:/uitheme/icons/arrow_down.svg);
+  width: 12px;
+  height: 12px;
 }
 
 /*

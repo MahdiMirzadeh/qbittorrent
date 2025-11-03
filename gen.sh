@@ -141,9 +141,21 @@ build_one() {
         sed -f "$SED_SCRIPT" "$TEMPLATE_DIR/stylesheet.qss.template" > "$TEMP_DIR/stylesheet.qss"
         sed -f "$SED_SCRIPT" "$TEMPLATE_DIR/config.json.template" > "$TEMP_DIR/config.json"
 
-        # Copy icons directory if present
+        # Copy and process icons directory if present
         if [ -d "$TEMPLATE_DIR/icons" ]; then
-            cp -R "$TEMPLATE_DIR/icons" "$TEMP_DIR"/
+            mkdir -p "$TEMP_DIR/icons"
+            for icon in "$TEMPLATE_DIR/icons"/*; do
+                if [ -f "$icon" ]; then
+                    icon_name=$(basename "$icon")
+                    if [ "${icon_name##*.}" = "svg" ]; then
+                        # Apply color substitution to SVG files
+                        sed -f "$SED_SCRIPT" "$icon" > "$TEMP_DIR/icons/$icon_name"
+                    else
+                        # Copy non-SVG files as-is
+                        cp "$icon" "$TEMP_DIR/icons/$icon_name"
+                    fi
+                fi
+            done
         fi
 
         # Create resources.qrc
