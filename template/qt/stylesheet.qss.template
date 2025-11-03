@@ -108,18 +108,22 @@ QToolBar::separator {
 QToolButton {
   border: none;
   background: %BG_PRIMARY%;
+  padding: 6px;
+  margin: 2px;
+  min-width: 32px;
+  min-height: 32px;
 }
 
 QToolButton:hover {
   background: %BG_SECONDARY%;
   color: %FG_PRIMARY%;
   border: none;
+  border-radius: 3px;
 }
 
 QToolButton:pressed {
   background: %BORDER%;
   color: %BG_PRIMARY%;
-  padding: 0;
 }
 
 /*
