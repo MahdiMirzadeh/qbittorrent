@@ -184,3 +184,22 @@ div:has(> div.dynamicTableFixedHeaderDiv):not(.invisible) {
         color: var(--color-tracker-not-working);
     }
 }
+
+/* Ratio column colors */
+#transferList tr:not(.selected, :hover) {
+    & .ratioBad {
+        color: var(--color-text-red);
+    }
+
+    & .ratioAlmost {
+        color: var(--color-text-orange);
+    }
+
+    & .ratioGood {
+        color: var(--color-text-green);
+    }
+
+    & .ratioBest {
+        color: var(--color-text-blue);
+    }
+}

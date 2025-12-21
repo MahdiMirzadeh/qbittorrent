@@ -1315,6 +1315,28 @@ window.qBittorrent.DynamicTable ??= (() => {
                 const string = (ratio === -1) ? "∞" : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
                 td.textContent = string;
                 td.title = string;
+
+                // Remove existing ratio classes
+                td.classList.remove("ratioBad", "ratioAlmost", "ratioGood", "ratioBest");
+
+                // Apply color class based on ratio value
+                if (ratio === -1) {
+                    // Infinite ratio
+                    td.classList.add("ratioBest");
+                }
+                else if (ratio < 0.5) {
+                    td.classList.add("ratioBad");
+                }
+                else if (ratio < 1.0) {
+                    td.classList.add("ratioAlmost");
+                }
+                else if (ratio < 5.0) {
+                    td.classList.add("ratioGood");
+                }
+                else {
+                    // ratio >= 5.0
+                    td.classList.add("ratioBest");
+                }
             };
 
             // popularity
