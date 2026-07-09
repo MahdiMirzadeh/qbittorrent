@@ -76,13 +76,15 @@ QMenu::indicator {
 QMenu::indicator:non-exclusive {
   width: 16px;
   height: 16px;
-  border: 1px solid %BORDER%;
-  background: %BG_PRIMARY%;
-  border-radius: 2px;
+  image: url(:/uitheme/icons/checkbox_unchecked.svg);
 }
 
 QMenu::indicator:non-exclusive:checked {
-  border-color: %ACCENT%;
+  image: url(:/uitheme/icons/checkbox_checked.svg);
+}
+
+QMenu::indicator:non-exclusive:indeterminate {
+  image: url(:/uitheme/icons/checkbox_indeterminate.svg);
 }
 
 /*
@@ -526,15 +528,22 @@ QLineEdit,
 QLineEdit:read-only
 {
   background: %BG_PRIMARY%;
-  color: %ACCENT%;
-  border: none;
-  padding: 4px;
+  color: %FG_PRIMARY%;
+  border: 1px solid %BORDER%;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+
+QLineEdit:focus,
+QLineEdit:read-only:focus {
+  border: 1px solid %ACCENT%;
 }
 
 QLineEdit:disabled,
 QLineEdit:disabled:read-only
 {
   color: %BG_SECONDARY%;
+  border: 1px solid %BORDER%;
 }
 
 /* Keep inline line-edit actions aligned instead of inheriting toolbar-sized tool button chrome */
@@ -661,6 +670,7 @@ QDialog QScrollBar:horizontal, QDialog QScrollBar:vertical {
 
 QCheckBox, QRadioButton {
   color: %FG_PRIMARY%;
+  spacing: 8px;
 }
 
 QCheckBox:disabled, QRadioButton:disabled {
@@ -671,20 +681,44 @@ QCheckBox:disabled, QRadioButton:disabled {
 /* 
   Checkbox & Radio Button Styling with embedded SVG icons
 */
-QCheckBox::indicator, QGroupBox::indicator, QTreeView::indicator {
+QCheckBox::indicator,
+QGroupBox::indicator,
+QTreeView::indicator,
+QListView::indicator,
+QListWidget::indicator,
+QTableView::indicator,
+QTableWidget::indicator {
   width: 17px;
   height: 17px;
 }
 
-QCheckBox::indicator:unchecked, QGroupBox::indicator:unchecked, QTreeView::indicator:unchecked {
+QCheckBox::indicator:unchecked,
+QGroupBox::indicator:unchecked,
+QTreeView::indicator:unchecked,
+QListView::indicator:unchecked,
+QListWidget::indicator:unchecked,
+QTableView::indicator:unchecked,
+QTableWidget::indicator:unchecked {
   image: url(:/uitheme/icons/checkbox_unchecked.svg);
 }
 
-QCheckBox::indicator:checked, QGroupBox::indicator:checked, QTreeView::indicator:checked {
+QCheckBox::indicator:checked,
+QGroupBox::indicator:checked,
+QTreeView::indicator:checked,
+QListView::indicator:checked,
+QListWidget::indicator:checked,
+QTableView::indicator:checked,
+QTableWidget::indicator:checked {
   image: url(:/uitheme/icons/checkbox_checked.svg);
 }
 
-QCheckBox::indicator:indeterminate, QGroupBox::indicator:indeterminate, QTreeView::indicator:indeterminate {
+QCheckBox::indicator:indeterminate,
+QGroupBox::indicator:indeterminate,
+QTreeView::indicator:indeterminate,
+QListView::indicator:indeterminate,
+QListWidget::indicator:indeterminate,
+QTableView::indicator:indeterminate,
+QTableWidget::indicator:indeterminate {
   image: url(:/uitheme/icons/checkbox_indeterminate.svg);
 }
 
