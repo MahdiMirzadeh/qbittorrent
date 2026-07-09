@@ -538,6 +538,28 @@ QLineEdit:disabled:read-only
   color: %BG_SECONDARY%;
 }
 
+/* Keep inline line-edit actions aligned instead of inheriting toolbar-sized tool button chrome */
+QLineEdit QToolButton,
+QComboBox QToolButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 16px;
+  min-height: 16px;
+  max-width: 16px;
+  max-height: 16px;
+}
+
+QLineEdit QToolButton:hover,
+QLineEdit QToolButton:pressed,
+QComboBox QToolButton:hover,
+QComboBox QToolButton:pressed {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
 /*
   QHeaderView
 */
@@ -674,7 +696,7 @@ QCheckBox::indicator:indeterminate, QGroupBox::indicator:indeterminate, QTreeVie
 QComboBox {
   background: %BG_PRIMARY%;
   color: %ACCENT%;
-  padding: 4px;
+  padding: 4px 26px 4px 6px;
   border: 1px solid %BORDER%;
   border-radius: 3px;
 }
@@ -713,10 +735,10 @@ QComboBox QAbstractItemView::item:hover {
 }
 
 QComboBox::drop-down {
-  subcontrol-origin: margin;
+  subcontrol-origin: padding;
   subcontrol-position: top right;
   width: 20px;
-  background: %BG_PRIMARY%;
+  background: transparent;
   border-left: 1px solid %BORDER%;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -724,8 +746,8 @@ QComboBox::drop-down {
 
 QComboBox::down-arrow {
   image: url(:/uitheme/icons/arrow_down.svg);
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 }
 
 /*
