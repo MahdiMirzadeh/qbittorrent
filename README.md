@@ -59,6 +59,7 @@ curl "http://localhost:8080/api/v2/app/setPreferences?json=%7B%22alternative_web
 
 - `jq` — JSON processor
 - `rcc` — Qt Resource Compiler (Qt5 or Qt6)
+- `lrelease` — Qt Linguist compiler for WebUI `.qm` translations
 - `zip` — (optional) for WebUI `.zip` archives
 
 ```bash
@@ -337,7 +338,7 @@ Our `gen.sh` script:
 
 1. Copies `template/webui/` to temp directory
 2. Renders `theme.css` from `theme.css.template` using JSON color tokens
-3. Creates archives: `webui/webui-<name>.tar.gz` (and `.zip`)
+3. Compiles WebUI translations (`.ts` → `.qm`) and creates archives: `webui/webui-<name>.tar.gz` (and `.zip`)
 
 **Official Documentation**: [Developing alternate WebUIs](https://github.com/qbittorrent/qBittorrent/wiki/Developing-alternate-WebUIs-(WIP))
 

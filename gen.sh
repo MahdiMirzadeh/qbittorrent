@@ -15,6 +15,7 @@ OUTPUT_DIR_ASSETS=${OUTPUT_DIR_ASSETS:-assets}
 BUILD_QT=${BUILD_QT:-1}
 BUILD_WEBUI=${BUILD_WEBUI:-1}
 BUILD_PALETTE=${BUILD_PALETTE:-1}
+LRELEASE_BIN=
 
 show_usage() {
     cat <<EOF
@@ -45,6 +46,17 @@ EOF
     exit 0
 }
 
+find_lrelease() {
+    for cmd in lrelease lrelease-qt6 qt6-lrelease; do
+        if command -v "$cmd" >/dev/null 2>&1; then
+            printf '%s\n' "$cmd"
+            return 0
+        fi
+    done
+
+    return 1
+}
+
 # Check dependencies
 check_deps() {
     if ! command -v jq >/dev/null 2>&1; then
@@ -54,6 +66,12 @@ check_deps() {
     if [ "$BUILD_QT" = "1" ] && ! command -v rcc >/dev/null 2>&1; then
         echo "Error: rcc (Qt Resource Compiler) is required but not installed."
         exit 1
+    fi
+    if [ "$BUILD_WEBUI" = "1" ]; then
+        LRELEASE_BIN=$(find_lrelease) || {
+            echo "Error: lrelease (Qt Linguist) is required to compile WebUI translations."
+            exit 1
+        }
     fi
 }
 
@@ -97,6 +115,29 @@ gen_palette() {
 EOF
     
     echo "  -> Generated palette: $output_file"
+}
+
+compile_webui_translations() {
+    translations_dir=$1
+
+    if [ ! -d "$translations_dir" ]; then
+        return 0
+    fi
+
+    found_ts=0
+    for ts_file in "$translations_dir"/*.ts; do
+        if [ ! -f "$ts_file" ]; then
+            continue
+        fi
+
+        found_ts=1
+        qm_file=${ts_file%.ts}.qm
+        "$LRELEASE_BIN" "$ts_file" -qm "$qm_file" >/dev/null
+    done
+
+    if [ "$found_ts" = "1" ]; then
+        rm -f "$translations_dir"/*.ts "$translations_dir"/webui_translations.qrc
+    fi
 }
 
 # Build one theme from JSON
@@ -203,6 +244,10 @@ EOF
         cp -a "$TEMPLATE_WEBUI_DIR"/. "$TMP_WEBUI_DIR"/
         sed -f "$SED_SCRIPT" "$TEMPLATE_WEBUI_DIR/private/css/theme.css.template" > "$TMP_WEBUI_DIR/private/css/theme.css"
         rm -f "$TMP_WEBUI_DIR/private/css/theme.css.template"
+        if [ -d "$TMP_WEBUI_DIR/translations" ]; then
+            echo "     -> Compiling WebUI translations"
+            compile_webui_translations "$TMP_WEBUI_DIR/translations"
+        fi
 
         mkdir -p "$OUTPUT_DIR_WEBUI"
         tar -C "$TMP_WEBUI_BASE" -czf "$OUTPUT_DIR_WEBUI/${ARCHIVE_BASENAME}.tar.gz" "$ARCHIVE_ROOT_NAME"
