@@ -71,20 +71,140 @@
         <translation>Додати в початок черги</translation>
     </message>
     <message>
-        <source>One link per line (HTTP links, Magnet links and info-hashes are supported)</source>
-        <translation>Одне посилання на рядок (підтримуються HTTP- і magnet-посилання та інформаційні хеші)</translation>
+        <source>Download in sequential order</source>
+        <translation>Завантажувати послідовно</translation>
     </message>
     <message>
-        <source>Add torrent links</source>
-        <translation>Додати посилання на торрент</translation>
+        <source>Size:</source>
+        <translation>Розмір:</translation>
     </message>
     <message>
-        <source>Select .torrent files</source>
-        <translation>Виберіть торрент файл.</translation>
+        <source>Save at</source>
+        <translation>Зберегти у</translation>
     </message>
     <message>
-        <source>Torrent options</source>
-        <translation> Варіанти торенту</translation>
+        <source>Torrent information</source>
+        <translation>Інформація про торрент</translation>
+    </message>
+    <message>
+        <source>Save path:</source>
+        <translation>Шлях збереження:</translation>
+    </message>
+    <message>
+        <source>Info hash v1:</source>
+        <translation>Інформаційний хеш, версія 1:</translation>
+    </message>
+    <message>
+        <source>Rename torrent</source>
+        <translation>Перейменувати торрент</translation>
+    </message>
+    <message>
+        <source>Add torrent</source>
+        <translation>Додати торрент</translation>
+    </message>
+    <message>
+        <source>Not available</source>
+        <translation>Недоступно</translation>
+    </message>
+    <message>
+        <source>Priority</source>
+        <translation>Пріоритет</translation>
+    </message>
+    <message>
+        <source>High</source>
+        <translation>Високий</translation>
+    </message>
+    <message>
+        <source>Torrent settings</source>
+        <translation>Налаштування торрента</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Нормальний</translation>
+    </message>
+    <message>
+        <source>Save files to location:</source>
+        <translation>Зберігати файли до:</translation>
+    </message>
+    <message>
+        <source>Set as default category</source>
+        <translation>Зробити типовою категорією</translation>
+    </message>
+    <message>
+        <source>Limit upload rate</source>
+        <translation>Обмеження швидкості відвантаження</translation>
+    </message>
+    <message>
+        <source>Filter files...</source>
+        <translation>Фільтр файлів…</translation>
+    </message>
+    <message>
+        <source>Add Torrent</source>
+        <translation>Додати торрент</translation>
+    </message>
+    <message>
+        <source>Use another path for incomplete torrent</source>
+        <translation>Використовувати інший шлях для неповних торрентів</translation>
+    </message>
+    <message>
+        <source>Date:</source>
+        <translation>Дата:</translation>
+    </message>
+    <message>
+        <source>Save as .torrent file</source>
+        <translation>Зберегти як файл .torrent</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Всі</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>—</translation>
+    </message>
+    <message>
+        <source>Maximum</source>
+        <translation>Максимальний</translation>
+    </message>
+    <message>
+        <source>Do not download</source>
+        <translation>Не завантажувати</translation>
+    </message>
+    <message>
+        <source>Download first and last pieces first</source>
+        <translation>Спочатку завантажувати першу і останню частину</translation>
+    </message>
+    <message>
+        <source>Comment:</source>
+        <translation>Коментар:</translation>
+    </message>
+    <message>
+        <source>Unable to download torrent file</source>
+        <translation>Неможливо завантажити торрент-файл</translation>
+    </message>
+    <message>
+        <source>Info hash v2:</source>
+        <translation>Інформаційний хеш, версія 2:</translation>
+    </message>
+    <message>
+        <source>Tags:</source>
+        <translation>Теги:</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>Файли</translation>
+    </message>
+    <message>
+        <source>Limit download rate</source>
+        <translation>Обмеження швидкості завантаження</translation>
+    </message>
+    <message>
+        <source>%1 (Free space on disk: %2)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>KiB/s</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -185,7 +305,7 @@
     </message>
     <message>
         <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Не вдалося зберегти налаштування програми, можливо qBittorrent недоступний.</translation>
+        <translation type="vanished">Не вдалося зберегти налаштування програми, можливо qBittorrent недоступний.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -200,15 +320,6 @@
         <translation>Додати</translation>
     </message>
     <message>
-        <source>Upload Torrents</source>
-        <comment>Upload torrent files to qBittorent using WebUI</comment>
-        <translation>Відвантажити торренти</translation>
-    </message>
-    <message>
-        <source>Save files to location:</source>
-        <translation>Зберігати файли до:</translation>
-    </message>
-    <message>
         <source>More information</source>
         <translation>Детальніше</translation>
     </message>
@@ -219,18 +330,6 @@
     <message>
         <source>Set location</source>
         <translation>Задати розташування</translation>
-    </message>
-    <message>
-        <source>Limit upload rate</source>
-        <translation>Обмеження швидкості відвантаження</translation>
-    </message>
-    <message>
-        <source>Limit download rate</source>
-        <translation>Обмеження швидкості завантаження</translation>
-    </message>
-    <message>
-        <source>Rename torrent</source>
-        <translation>Перейменувати торрент</translation>
     </message>
     <message>
         <source>Monday</source>
@@ -270,10 +369,6 @@
     <message>
         <source>Logout</source>
         <translation>Вийти</translation>
-    </message>
-    <message>
-        <source>Upload local torrent</source>
-        <translation>Відвантажити локальний торрент</translation>
     </message>
     <message>
         <source>Save</source>
@@ -373,7 +468,7 @@
     </message>
     <message>
         <source>Could not contact qBittorrent</source>
-        <translation>Не вдалося зв’язатися з qBittorrent</translation>
+        <translation type="vanished">Не вдалося зв’язатися з qBittorrent</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -436,11 +531,63 @@
         <translation>Додайте веб seed</translation>
     </message>
     <message>
-        <source>Share ratio limit must not have a negative value.</source>
-        <translation type="unfinished" />
+        <source>Unable to delete API key.</source>
+        <translation>Неможливо видалити ключ API.</translation>
     </message>
     <message>
         <source>Seeding time limit must not have a negative value.</source>
+        <translation>Часовий ліміт для роздачі не повинен мати від'ємне значення.</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>Коефіцієнт розподілу не може мати від'ємне значення.</translation>
+    </message>
+    <message>
+        <source>Peer turnover interval must be greater than or equal to 0.</source>
+        <translation>Період зміни пірів має бути більшим або рівним 0.</translation>
+    </message>
+    <message>
+        <source>Unable to parse response.</source>
+        <translation>Неможливо проаналізувати відповідь.</translation>
+    </message>
+    <message>
+        <source>Unable to rotate API key.</source>
+        <translation>Неможливо змінити ключ API.</translation>
+    </message>
+    <message>
+        <source>Peer turnover must be between 0 and 100.</source>
+        <translation>Зміна пірів має бути від 0 до 100.</translation>
+    </message>
+    <message>
+        <source>Outstanding memory when checking torrents must be greater than 0 and less than 1024.</source>
+        <translation>Виділена пам'ять при перевірці торрентів повинна бути більшою за 0 і меншою за 1024.</translation>
+    </message>
+    <message>
+        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <translation>Неможливо завантажити налаштування програми, ймовірно, qBittorrent недоступний.</translation>
+    </message>
+    <message>
+        <source>Peer turnover cutoff must be between 0 and 100.</source>
+        <translation>Поріг зміни пірів має бути від 0 до 100.</translation>
+    </message>
+    <message>
+        <source>Peer DSCP must be between 0 and 255.</source>
+        <translation>DSCP має бути від 0 до 255.</translation>
+    </message>
+    <message>
+        <source>Unable to add torrents.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Error:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Could not contact qBittorrent.</source>
         <translation type="unfinished" />
     </message>
 </context>
@@ -694,6 +841,38 @@
         <source>Stop All</source>
         <translation>Зупинити все</translation>
     </message>
+    <message>
+        <source>Torrent Creator</source>
+        <translation>Створити торрент</translation>
+    </message>
+    <message>
+        <source>Filter feed items...</source>
+        <translation> Фільтрувати елементи стрічки…</translation>
+    </message>
+    <message>
+        <source>Info Hash v1</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Invert Selection</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Remove torrent and content</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Remove torrent</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Info Hash v2</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>OptionsDialog</name>
@@ -719,7 +898,7 @@
     </message>
     <message>
         <source>Language</source>
-        <translation>Мова</translation>
+        <translation type="vanished">Мова</translation>
     </message>
     <message>
         <source>Email notification upon download completion</source>
@@ -795,7 +974,7 @@
     </message>
     <message>
         <source>This server requires a secure connection (SSL)</source>
-        <translation>Цей сервер вимагає безпечного з'єднання (SSL)</translation>
+        <translation type="vanished">Цей сервер вимагає безпечного з'єднання (SSL)</translation>
     </message>
     <message>
         <source>Authentication</source>
@@ -1168,10 +1347,6 @@
         <translation>При додаванні торрента</translation>
     </message>
     <message>
-        <source>Info: The password is saved unencrypted</source>
-        <translation>Примітка: Пароль буде збережений в нешифрованому вигляді</translation>
-    </message>
-    <message>
         <source>μTP-TCP mixed mode algorithm:</source>
         <translation>Алгоритм змішаного режиму μTP-TCP:</translation>
     </message>
@@ -1270,10 +1445,6 @@
     <message>
         <source>Asynchronous I/O threads:</source>
         <translation>Потоки асинхронного введення-виведення:</translation>
-    </message>
-    <message>
-        <source>s</source>
-        <translation>с</translation>
     </message>
     <message>
         <source>Send buffer watermark:</source>
@@ -1452,10 +1623,6 @@
         <translation>Не створювати підтеку</translation>
     </message>
     <message>
-        <source>Type of service (ToS) for connections to peers</source>
-        <translation>Тип обслуговування (ToS) при приєднанні до пірів</translation>
-    </message>
-    <message>
         <source>Outgoing connections per second:</source>
         <translation>Вихідні з'єднання за секунду:</translation>
     </message>
@@ -1526,10 +1693,6 @@
     <message>
         <source>POSIX-compliant</source>
         <translation>Сумісний з POSIX</translation>
-    </message>
-    <message>
-        <source>This option is less effective on Linux</source>
-        <translation>Ця опція менш ефективна на Linux</translation>
     </message>
     <message>
         <source>It controls the internal state update interval which in turn will affect UI updates</source>
@@ -1700,10 +1863,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Розмір буфера отримання сокета [0: системне замовчування]</translation>
     </message>
     <message>
-        <source>Use Subcategories</source>
-        <translation>Використовувати підкатегорії</translation>
-    </message>
-    <message>
         <source>Add to top of queue</source>
         <translation>Додати в початок черги</translation>
     </message>
@@ -1849,7 +2008,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>It appends the text to the window title to help distinguish qBittorent instances</source>
-        <translation>Він додає текст до заголовка вікна, щоб допомогти розрізнити екземпляри qBittorent</translation>
+        <translation type="vanished">Він додає текст до заголовка вікна, щоб допомогти розрізнити екземпляри qBittorent</translation>
     </message>
     <message>
         <source>The WebUI username must be at least 3 characters long.</source>
@@ -1944,10 +2103,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Увімкнути прапор захищених файлів cookie (вимагає HTTPS або LocalHost Connection)</translation>
     </message>
     <message>
-        <source>When duplicate torrent is being added</source>
-        <translation>При додаванні дубліката торрента</translation>
-    </message>
-    <message>
         <source>Action on double-click</source>
         <translation>Дія при подвійному клацанні</translation>
     </message>
@@ -1965,7 +2120,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     </message>
     <message>
         <source>Attempted to send email. Check your inbox to confirm success</source>
-        <translation>Спроба надіслати електронний лист. Перевірте свою поштову скриньку, щоб підтвердити успіх</translation>
+        <translation type="vanished">Спроба надіслати електронний лист. Перевірте свою поштову скриньку, щоб підтвердити успіх</translation>
     </message>
     <message>
         <source>Automatically append trackers from URL to new downloads:</source>
@@ -2043,13 +2198,161 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Log Files</source>
         <translation>Файли журналів</translation>
     </message>
+    <message>
+        <source>Enable optimized table rendering (experimental)</source>
+        <translation type="vanished">Увімкнути оптимізоване відображення таблиць (експериментально)</translation>
+    </message>
+    <message>
+        <source>Note: The password is saved unencrypted</source>
+        <translation>Примітка: Пароль зберігається в незашифрованому вигляді</translation>
+    </message>
+    <message>
+        <source>Internal hostname resolver cache expiry interval</source>
+        <translation>Період вичерпання кешу внутрішнього перетворювача імен хостів</translation>
+    </message>
+    <message>
+        <source>sec</source>
+        <translation>с</translation>
+    </message>
+    <message>
+        <source>Rotate API key</source>
+        <translation> Змінити API-ключ</translation>
+    </message>
+    <message>
+        <source>Generate a key</source>
+        <translation> Згенерувати ключ</translation>
+    </message>
+    <message>
+        <source>When adding a duplicate torrent</source>
+        <translation> При додаванні дублікату торрента</translation>
+    </message>
+    <message>
+        <source>Delete API key</source>
+        <translation> Видалити API-ключ</translation>
+    </message>
+    <message>
+        <source>%M: Comment</source>
+        <translation> %M: Коментар</translation>
+    </message>
+    <message>
+        <source>Generate API key</source>
+        <translation> Згенерувати API-ключ</translation>
+    </message>
+    <message>
+        <source>Copied</source>
+        <translation>Скопійовано</translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation> Користувач</translation>
+    </message>
+    <message>
+        <source>Reset filter selection</source>
+        <translation>Скинути вибір фільтра</translation>
+    </message>
+    <message>
+        <source>API Key</source>
+        <translation> API-ключ</translation>
+    </message>
+    <message>
+        <source>Copy API key</source>
+        <translation> Копіювати API-ключ</translation>
+    </message>
+    <message>
+        <source>Differentiated Services Code Point (DSCP) for connections to peers</source>
+        <translation>Поле DSCP для з'єднань з пірами</translation>
+    </message>
+    <message>
+        <source>no encryption used when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>SMTPS</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(alternative choice if supported)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>use SMTPS encryption when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Compact</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Display density:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>SMTP encryption:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Attempted to send test email.\nCheck your inbox to confirm success.\nCheck the Execution Log for errors.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Default port</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>STARTTLS</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Enable optimized table rendering</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Select the encryption type used when sending SMTP emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(last choice if no other option)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Date format:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Browser default</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resolve peer host names:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Pread/pwrite</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>use STARTTLS encryption when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The WebUI username must not contain a colon.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Localization</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(best choice if supported)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>PeerListWidget</name>
-    <message>
-        <source>IP</source>
-        <translation>IP</translation>
-    </message>
     <message>
         <source>Port</source>
         <translation>Порт</translation>
@@ -2125,6 +2428,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Peer ID Client</source>
         <translation>Peer ID Клієнт</translation>
+    </message>
+    <message>
+        <source>IP/Address</source>
+        <translation>IP/Адреса</translation>
     </message>
 </context>
 <context>
@@ -2308,14 +2615,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>%1 (%2 середн.)</translation>
     </message>
     <message>
-        <source>Download limit:</source>
-        <translation>Обмеження завантаження:</translation>
-    </message>
-    <message>
-        <source>Upload limit:</source>
-        <translation>Обмеження відвантаження</translation>
-    </message>
-    <message>
         <source>Priority</source>
         <translation>Пріоритет</translation>
     </message>
@@ -2459,6 +2758,10 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Private:</source>
         <translation>Приватний:</translation>
     </message>
+    <message>
+        <source>Availability:</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>ScanFoldersModel</name>
@@ -2489,11 +2792,7 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
 </context>
 <context>
     <name>SpeedLimitDialog</name>
-    <message>
-        <source>KiB/s</source>
-        <translation>КіБ/с</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>StatsDialog</name>
     <message>
@@ -2559,6 +2858,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Total queued size:</source>
         <translation>Загальний розмір в черзі:</translation>
+    </message>
+    <message>
+        <source>Tracker statistics</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Queued tracker announces:</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2791,12 +3098,12 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Session Download</source>
         <comment>Amount of data downloaded since program open (e.g. in MB)</comment>
-        <translation>Завантажено за сеанс</translation>
+        <translation type="vanished">Завантажено за сеанс</translation>
     </message>
     <message>
         <source>Session Upload</source>
         <comment>Amount of data uploaded since program open (e.g. in MB)</comment>
-        <translation>Відвантажено за сеанс</translation>
+        <translation type="vanished">Відвантажено за сеанс</translation>
     </message>
     <message>
         <source>Remaining</source>
@@ -2874,13 +3181,21 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Status Icon</source>
         <translation>Значок статусу</translation>
     </message>
+    <message>
+        <source>Session Uploaded</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Session Downloaded</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Created On</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TrackerListWidget</name>
-    <message>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
     <message>
         <source>Status</source>
         <translation>Статус</translation>
@@ -2988,6 +3303,42 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Original</source>
         <translation>Оригінал</translation>
+    </message>
+    <message>
+        <source>URL/Announce Endpoint</source>
+        <translation>URL/Оголошення кінцевої точки</translation>
+    </message>
+    <message>
+        <source>BT Protocol</source>
+        <translation>Протокол BT</translation>
+    </message>
+    <message>
+        <source>Next Announce</source>
+        <translation>Наступний анонс</translation>
+    </message>
+    <message>
+        <source>Tier:</source>
+        <translation>Рівень:</translation>
+    </message>
+    <message>
+        <source>Tracker error</source>
+        <translation>Помилка трекера</translation>
+    </message>
+    <message>
+        <source>Unreachable</source>
+        <translation>Недосяжний</translation>
+    </message>
+    <message>
+        <source>Force reannounce to selected tracker(s)</source>
+        <translation>Повторно анонсувати вибрані трекери</translation>
+    </message>
+    <message>
+        <source>Min Announce</source>
+        <translation>Мін. Оголошення</translation>
+    </message>
+    <message>
+        <source>Force reannounce to all trackers</source>
+        <translation>Примусово отримати піри з усіх трекерів</translation>
     </message>
 </context>
 <context>
@@ -3281,10 +3632,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Примусовий Старт</translation>
     </message>
     <message>
-        <source>Save path:</source>
-        <translation>Шлях збереження:</translation>
-    </message>
-    <message>
         <source>Location:</source>
         <translation>Розташування:</translation>
     </message>
@@ -3309,8 +3656,8 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <translation>Додати тег</translation>
     </message>
     <message>
-        <source>Category:</source>
-        <translation>Категорія:</translation>
+        <source>Content Path</source>
+        <translation>Шлях до вмісту</translation>
     </message>
 </context>
 <context>
@@ -3343,6 +3690,30 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>inactive minutes</source>
         <translation>хвилин неактивності</translation>
     </message>
+    <message>
+        <source>Default</source>
+        <translation>Типово</translation>
+    </message>
+    <message>
+        <source>Remove torrent</source>
+        <translation>Видалити торрент</translation>
+    </message>
+    <message>
+        <source>Remove torrent and its content</source>
+        <translation>Видаліть торрент і його вміст</translation>
+    </message>
+    <message>
+        <source>Stop torrent</source>
+        <translation>Зупинити торрент</translation>
+    </message>
+    <message>
+        <source>Enable super seeding for torrent</source>
+        <translation>Увімкнути режим супер-сід для торрента</translation>
+    </message>
+    <message>
+        <source>Action when the limit is reached</source>
+        <translation>Дії при досягненні обмеження</translation>
+    </message>
 </context>
 <context>
     <name>about</name>
@@ -3367,14 +3738,6 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>Download from URLs</source>
         <translation>Завантажити з адрес</translation>
-    </message>
-    <message>
-        <source>Download</source>
-        <translation>Завантажити</translation>
-    </message>
-    <message>
-        <source>Add Torrent Links</source>
-        <translation>Додати посилання на торрент</translation>
     </message>
 </context>
 <context>
@@ -3904,6 +4267,22 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
         <source>Close all tabs</source>
         <translation>Закрити усі вкладки</translation>
     </message>
+    <message>
+        <source>Refresh tab</source>
+        <translation>Оновити вкладку</translation>
+    </message>
+    <message>
+        <source>Stop search</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Use as search text</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Open download window</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TorrentContentTreeView</name>
@@ -4029,6 +4408,14 @@ Use ';' to split multiple entries. Can use wildcard '*'.</source>
     <message>
         <source>URL cannot be empty</source>
         <translation>URL не може бути порожнім</translation>
+    </message>
+    <message>
+        <source>Open link</source>
+        <translation>Відкрити посилання</translation>
+    </message>
+    <message>
+        <source>Author: </source>
+        <translation>Автор: </translation>
     </message>
 </context>
 <context>
@@ -4287,6 +4674,18 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
         <source>Add Stopped:</source>
         <translation>Додавання зупинено:</translation>
     </message>
+    <message>
+        <source>Rule cloning</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear downloaded episodes confirmation</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clone rule...</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TrackerFiltersList</name>
@@ -4313,6 +4712,18 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Stop torrents</source>
         <translation>Зупинити торренти</translation>
+    </message>
+    <message>
+        <source>Tracker error</source>
+        <translation>Помилка трекера</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Попередження</translation>
+    </message>
+    <message>
+        <source>Other error</source>
+        <translation>Інша помилка</translation>
     </message>
 </context>
 <context>
@@ -4486,6 +4897,46 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
         <source>Unable to set category</source>
         <translation>Неможливо встановити категорію</translation>
     </message>
+    <message>
+        <source>Save path for incomplete torrents:</source>
+        <translation>Шлях збереження для незавершених торрентів:</translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <translation>Типово</translation>
+    </message>
+    <message>
+        <source>New Category</source>
+        <translation>Нова категорія</translation>
+    </message>
+    <message>
+        <source>Save path:</source>
+        <translation>Шлях збереження:</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Так</translation>
+    </message>
+    <message>
+        <source>Category:</source>
+        <translation>Категорія:</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>Ні</translation>
+    </message>
+    <message>
+        <source>Path:</source>
+        <translation>Шлях:</translation>
+    </message>
+    <message>
+        <source>Use another path for incomplete torrents:</source>
+        <translation>Використовувати інший шлях для незавершених торрентів:</translation>
+    </message>
+    <message>
+        <source>Category does not exist</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>CookiesDialog</name>
@@ -4584,6 +5035,314 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Invalid Username or Password.</source>
         <translation>Неправильний логін або пароль.</translation>
+    </message>
+</context>
+<context>
+    <name>TorrentCreator</name>
+    <message>
+        <source>Private</source>
+        <translation>Приватний</translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation>Джерело</translation>
+    </message>
+    <message>
+        <source>Queued</source>
+        <translation>В черзі</translation>
+    </message>
+    <message>
+        <source>Unable to create torrent.</source>
+        <translation>Неможливо створити торрент.</translation>
+    </message>
+    <message>
+        <source>Private
+                torrent (Won't distribute on DHT network)</source>
+        <translation>Приватний
+                торрент (не поширюється в мережі DHT)</translation>
+    </message>
+    <message>
+        <source>Unable to export torrent file</source>
+        <translation>Неможливо експортувати торрент файл</translation>
+    </message>
+    <message>
+        <source>Create New Torrent</source>
+        <translation>Створити новий торрент</translation>
+    </message>
+    <message>
+        <source>Comments:</source>
+        <translation>Коментарі:</translation>
+    </message>
+    <message>
+        <source>Download Torrent</source>
+        <translation>Завантажити торрент</translation>
+    </message>
+    <message>
+        <source>Status Icon</source>
+        <translation>Значок статусу</translation>
+    </message>
+    <message>
+        <source>Web seed URLs:</source>
+        <translation>Адреси веб-сідів:</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Невдача</translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation>Коментар</translation>
+    </message>
+    <message>
+        <source>Finished</source>
+        <translation>Завершено</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Налаштування</translation>
+    </message>
+    <message>
+        <source>Error Message</source>
+        <translation>Повідомлення про помилку</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Статус</translation>
+    </message>
+    <message>
+        <source>Align to piece boundary for files larger
+                than:</source>
+        <translation>Вирівняти по межі фрагмента для файлів, розмір яких перевищує
+                :</translation>
+    </message>
+    <message>
+        <source>Select file/folder to share:</source>
+        <translation>Вибрати файл/папку для спільного використання:</translation>
+    </message>
+    <message>
+        <source>Piece Size</source>
+        <translation>Розмір частини</translation>
+    </message>
+    <message>
+        <source>Progress</source>
+        <translation>Прогрес</translation>
+    </message>
+    <message>
+        <source>Completed On</source>
+        <translation>Завершено о</translation>
+    </message>
+    <message>
+        <source>Hybrid</source>
+        <translation>Гібридний</translation>
+    </message>
+    <message>
+        <source>Unable to load torrent creation tasks</source>
+        <translation>Неможливо завантажити завдання створення торрента</translation>
+    </message>
+    <message>
+        <source>Optimize
+                    alignment</source>
+        <translation>Оптимізувати
+                    вирівнювання</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>—</translation>
+    </message>
+    <message>
+        <source>Tracker URLs:</source>
+        <translation>Адреси трекерів:</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete selected tasks?</source>
+        <translation>Ви впевнені, що хочете видалити вибрані завдання?</translation>
+    </message>
+    <message>
+        <source>Path:</source>
+        <translation>Шлях:</translation>
+    </message>
+    <message>
+        <source>Create Torrent</source>
+        <translation>Створити торрент</translation>
+    </message>
+    <message>
+        <source>Auto</source>
+        <translation>Автоматично</translation>
+    </message>
+    <message>
+        <source>Started On</source>
+        <translation>Початок</translation>
+    </message>
+    <message>
+        <source>Web Seeds</source>
+        <translation>Веб роздачі</translation>
+    </message>
+    <message>
+        <source>Start
+                seeding
+                immediately</source>
+        <translation>Розпочати
+                роздачу
+                негайно</translation>
+    </message>
+    <message>
+        <source>Format</source>
+        <translation>Формат</translation>
+    </message>
+    <message>
+        <source>Torrent format:</source>
+        <translation>Формат торрента:</translation>
+    </message>
+    <message>
+        <source>Source Path</source>
+        <translation>Вихідний шлях</translation>
+    </message>
+    <message>
+        <source>Added On</source>
+        <translation>Додано</translation>
+    </message>
+    <message>
+        <source>Running</source>
+        <translation>Перебіг</translation>
+    </message>
+    <message>
+        <source>Torrent Creator</source>
+        <translation>Створити торрент</translation>
+    </message>
+    <message>
+        <source>Source:</source>
+        <translation>Джерело:</translation>
+    </message>
+    <message>
+        <source>Trackers</source>
+        <translation>Трекери</translation>
+    </message>
+    <message>
+        <source>Piece size:</source>
+        <translation>Розмір частини:</translation>
+    </message>
+    <message>
+        <source>Fields</source>
+        <translation>Поля</translation>
+    </message>
+    <message>
+        <source>Remove Task</source>
+        <translation>Видалити завдання</translation>
+    </message>
+    <message>
+        <source>Export Torrent</source>
+        <translation>Експорт торрента</translation>
+    </message>
+</context>
+<context>
+    <name>DownloadFromURLDialog</name>
+    <message>
+        <source>Download</source>
+        <translation>Завантажити</translation>
+    </message>
+    <message>
+        <source>Magnet link</source>
+        <translation>Magnet-посилання</translation>
+    </message>
+    <message>
+        <source>Add torrent links</source>
+        <translation>Додати посилання на торрент</translation>
+    </message>
+    <message>
+        <source>One link per line (HTTP links, Magnet links and info-hashes are supported)</source>
+        <translation>Одне посилання на рядок (підтримуються HTTP- і magnet-посилання та інформаційні хеші)</translation>
+    </message>
+    <message>
+        <source>URLs</source>
+        <translation>Адреси</translation>
+    </message>
+    <message>
+        <source>Add Torrent Links</source>
+        <translation>Додати посилання на торрент</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimit</name>
+    <message>
+        <source>Limit:</source>
+        <translation>Обмеження:</translation>
+    </message>
+    <message>
+        <source>Speed limit</source>
+        <translation>Обмеження швидкості</translation>
+    </message>
+    <message>
+        <source>Upload limit:</source>
+        <translation>Обмеження відвантаження</translation>
+    </message>
+    <message>
+        <source>Download limit:</source>
+        <translation>Обмеження завантаження:</translation>
+    </message>
+    <message>
+        <source>KiB/s</source>
+        <translation>КіБ/с</translation>
+    </message>
+</context>
+<context>
+    <name>ListWidget</name>
+    <message>
+        <source>Resize All</source>
+        <translation>Змінити розмір всіх</translation>
+    </message>
+    <message>
+        <source>Resize</source>
+        <translation>Змінити розмір</translation>
+    </message>
+</context>
+<context>
+    <name>confirmRotateAPIKeyDialog</name>
+    <message>
+        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <translation> Згенерувати API-ключ? Цей ключ можна використовувати для взаємодії з API qBittorrent.</translation>
+    </message>
+    <message>
+        <source>Delete this API key? The current key will immediately stop working.</source>
+        <translation> Видалити цей API-ключ? Поточний ключ негайно перестане працювати.</translation>
+    </message>
+    <message>
+        <source>Rotate this API key? The current key will immediately stop working and a new key will be generated.</source>
+        <translation> Змінити цей API-ключ? Поточний ключ негайно перестане працювати, і буде згенеровано новий.</translation>
+    </message>
+</context>
+<context>
+    <name>RSSCloneRule</name>
+    <message>
+        <source>Clone</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The cloned rule will be set as disabled and the downloaded episodes history will be cleared.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The rule name is unchanged. You must type a new rule name for the clone.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Please type the name for the clone of the download rule.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The rule name cannot be empty.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unable to clone the selected rule.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished" />
     </message>
 </context>
 </TS>

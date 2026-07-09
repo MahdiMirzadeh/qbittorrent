@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Metadata received</source>
-        <translation>Metadati ricevuti</translation>
+        <translation>Ricevuti metadati</translation>
     </message>
     <message>
         <source>Files checked</source>
@@ -71,20 +71,140 @@
         <translation>Aggiungi in cima alla coda</translation>
     </message>
     <message>
-        <source>One link per line (HTTP links, Magnet links and info-hashes are supported)</source>
-        <translation>Un collegamento per riga (collegamento HTTP, Magnet o info hash)</translation>
+        <source>Download in sequential order</source>
+        <translation>Scarica in ordine sequenziale</translation>
     </message>
     <message>
-        <source>Add torrent links</source>
-        <translation>Aggiungi collegamenti torrent</translation>
+        <source>Size:</source>
+        <translation>Dimensione:</translation>
     </message>
     <message>
-        <source>Select .torrent files</source>
-        <translation>Seleziona file .torrent</translation>
+        <source>Save at</source>
+        <translation>Salva in</translation>
     </message>
     <message>
-        <source>Torrent options</source>
-        <translation>Opzioni torrent</translation>
+        <source>Torrent information</source>
+        <translation>Informazioni torrent</translation>
+    </message>
+    <message>
+        <source>Save path:</source>
+        <translation>Percorso salvataggio:</translation>
+    </message>
+    <message>
+        <source>Info hash v1:</source>
+        <translation>Info hash v1:</translation>
+    </message>
+    <message>
+        <source>Rename torrent</source>
+        <translation>Rinomina torrent</translation>
+    </message>
+    <message>
+        <source>Add torrent</source>
+        <translation>Aggiungi torrent</translation>
+    </message>
+    <message>
+        <source>Not available</source>
+        <translation>Non disponibile</translation>
+    </message>
+    <message>
+        <source>Priority</source>
+        <translation>Priorità</translation>
+    </message>
+    <message>
+        <source>High</source>
+        <translation>Alta</translation>
+    </message>
+    <message>
+        <source>Torrent settings</source>
+        <translation>Impostazioni torrent</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Normale</translation>
+    </message>
+    <message>
+        <source>Save files to location:</source>
+        <translation>Salva file nel percorso:</translation>
+    </message>
+    <message>
+        <source>Set as default category</source>
+        <translation>Imposta come categoria predefinita</translation>
+    </message>
+    <message>
+        <source>Limit upload rate</source>
+        <translation>Limita velocità upload</translation>
+    </message>
+    <message>
+        <source>Filter files...</source>
+        <translation>Filtra file...</translation>
+    </message>
+    <message>
+        <source>Add Torrent</source>
+        <translation>Aggiungi torrent</translation>
+    </message>
+    <message>
+        <source>Use another path for incomplete torrent</source>
+        <translation>Per torrent incompleto usa un altro percorso</translation>
+    </message>
+    <message>
+        <source>Date:</source>
+        <translation>Data:</translation>
+    </message>
+    <message>
+        <source>Save as .torrent file</source>
+        <translation>Salva come file .torrent</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation>Tutti</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>N/D</translation>
+    </message>
+    <message>
+        <source>Maximum</source>
+        <translation>Massima</translation>
+    </message>
+    <message>
+        <source>Do not download</source>
+        <translation>Non scaricare</translation>
+    </message>
+    <message>
+        <source>Download first and last pieces first</source>
+        <translation>Per prime scarica la prima e l'ultima parte</translation>
+    </message>
+    <message>
+        <source>Comment:</source>
+        <translation>Commento:</translation>
+    </message>
+    <message>
+        <source>Unable to download torrent file</source>
+        <translation>Impossibile scaricare il file torrent</translation>
+    </message>
+    <message>
+        <source>Info hash v2:</source>
+        <translation>Info hash v2:</translation>
+    </message>
+    <message>
+        <source>Tags:</source>
+        <translation>Etichette:</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>Limit download rate</source>
+        <translation>Limita velocità download</translation>
+    </message>
+    <message>
+        <source>%1 (Free space on disk: %2)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>KiB/s</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -114,7 +234,7 @@
     </message>
     <message>
         <source>New Category</source>
-        <translation>Nuova categoria</translation>
+        <translation>Nuova Categoria</translation>
     </message>
     <message>
         <source>Edit category...</source>
@@ -185,7 +305,7 @@
     </message>
     <message>
         <source>Unable to save program preferences, qBittorrent is probably unreachable.</source>
-        <translation>Impossibile salvare le preferenze, qBittorrent potrebbe essere irraggiungibile.</translation>
+        <translation type="vanished">Impossibile salvare le preferenze, qBittorrent potrebbe essere irraggiungibile.</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -200,37 +320,16 @@
         <translation>Aggiungi</translation>
     </message>
     <message>
-        <source>Upload Torrents</source>
-        <comment>Upload torrent files to qBittorent using WebUI</comment>
-        <translation>Carica torrent</translation>
-    </message>
-    <message>
-        <source>Save files to location:</source>
-        <translation>Salva file nel percorso:</translation>
-    </message>
-    <message>
         <source>More information</source>
-        <translation>Maggiori info</translation>
+        <translation>Più informazioni</translation>
     </message>
     <message>
         <source>Information about certificates</source>
-        <translation>Info sui certificati</translation>
+        <translation>Informazioni sui certificati</translation>
     </message>
     <message>
         <source>Set location</source>
-        <translation>Imposta percorso</translation>
-    </message>
-    <message>
-        <source>Limit upload rate</source>
-        <translation>Limita velocità upload</translation>
-    </message>
-    <message>
-        <source>Limit download rate</source>
-        <translation>Limita velocità download</translation>
-    </message>
-    <message>
-        <source>Rename torrent</source>
-        <translation>Rinomina torrent</translation>
+        <translation>Imposta posizione</translation>
     </message>
     <message>
         <source>Monday</source>
@@ -272,10 +371,6 @@
         <translation>Disconnessione</translation>
     </message>
     <message>
-        <source>Upload local torrent</source>
-        <translation>Carica torrent locale</translation>
-    </message>
-    <message>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
@@ -285,7 +380,7 @@
     </message>
     <message>
         <source>Global number of upload slots limit must be greater than 0 or disabled.</source>
-        <translation>Numero globale limite slot upload  deve essere maggiore di 0 o disabilitato.</translation>
+        <translation>Numero globale limite slot upload deve essere maggiore di 0 o disabilitato.</translation>
     </message>
     <message>
         <source>Invalid category name:\nPlease do not use any special characters in the category name.</source>
@@ -325,8 +420,7 @@
     </message>
     <message>
         <source>Unable to add peers. Please ensure you are adhering to the IP:port format.</source>
-        <translation>Impossibile aggiungere peer. 
-Assicurati che corrispondano allo standard IP:porta.</translation>
+        <translation>Impossibile aggiungere peer. Assicurati che corrispondano allo standard IP:porta.</translation>
     </message>
     <message>
         <source>Name cannot be empty</source>
@@ -375,7 +469,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Could not contact qBittorrent</source>
-        <translation>Impossibile contattare qBittorrent</translation>
+        <translation type="vanished">Impossibile contattare qBittorrent</translation>
     </message>
     <message>
         <source>Remember choice</source>
@@ -407,7 +501,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Unable to set Auto Torrent Management for the selected torrents.</source>
-        <translation>Impossibile impostare la gestione del torrent automatico per i torrenti selezionati.</translation>
+        <translation>Impossibile impostare la gestione automatica del torrent per i torrent selezionati.</translation>
     </message>
     <message>
         <source>Unable to stop torrents.</source>
@@ -438,12 +532,64 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
         <translation>Aggiungi seed web</translation>
     </message>
     <message>
-        <source>Share ratio limit must not have a negative value.</source>
-        <translation>Il limite del rapporto di condivisione non deve avere un valore negativo.</translation>
+        <source>Unable to delete API key.</source>
+        <translation>Impossibile eliminare la chiave API.</translation>
     </message>
     <message>
         <source>Seeding time limit must not have a negative value.</source>
         <translation>Il limite di tempo di seeding non deve avere un valore negativo.</translation>
+    </message>
+    <message>
+        <source>Share ratio limit must not have a negative value.</source>
+        <translation>Il limite del rapporto di condivisione non deve avere un valore negativo.</translation>
+    </message>
+    <message>
+        <source>Peer turnover interval must be greater than or equal to 0.</source>
+        <translation>L'intervallo del turnover dei peer deve essere maggiore o uguale a 0.</translation>
+    </message>
+    <message>
+        <source>Unable to parse response.</source>
+        <translation>Impossibile analizzare la risposta.</translation>
+    </message>
+    <message>
+        <source>Unable to rotate API key.</source>
+        <translation>Impossibile ruotare la chiave API.</translation>
+    </message>
+    <message>
+        <source>Peer turnover must be between 0 and 100.</source>
+        <translation>Il turnover dei peer deve essere compreso tra 0 e 100.</translation>
+    </message>
+    <message>
+        <source>Outstanding memory when checking torrents must be greater than 0 and less than 1024.</source>
+        <translation>La memoria disponibile durante il controllo dei torrent deve essere maggiore di 0 e minore di 1024.</translation>
+    </message>
+    <message>
+        <source>Unable to load program preferences, qBittorrent is probably unreachable.</source>
+        <translation>Impossibile caricare le preferenze del programma, qBittorrent probabilmente non è raggiungibile.</translation>
+    </message>
+    <message>
+        <source>Peer turnover cutoff must be between 0 and 100.</source>
+        <translation>Il limite del turnover dei peer deve essere compreso tra 0 e 100.</translation>
+    </message>
+    <message>
+        <source>Peer DSCP must be between 0 and 255.</source>
+        <translation>DSCP peer deve essere compreso tra 0 e 255.</translation>
+    </message>
+    <message>
+        <source>Unable to add torrents.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unable to save preferences, qBittorrent is probably unreachable.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Error:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Could not contact qBittorrent.</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -494,7 +640,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>Info programma</translation>
+        <translation>Informazioni</translation>
     </message>
     <message>
         <source>Add Torrent File...</source>
@@ -526,7 +672,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Are you sure you want to quit qBittorrent?</source>
-        <translation>Vuoi uscire da qBittorrent?</translation>
+        <translation>Sei sicuro di voler uscire da qBittorrent?</translation>
     </message>
     <message>
         <source>Alternative speed limits</source>
@@ -590,7 +736,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Connection status: Firewalled</source>
-        <translation>Stato conenssione: sotto firewall</translation>
+        <translation>Stato connessione: sotto firewall</translation>
     </message>
     <message>
         <source>Connection status: Connected</source>
@@ -686,15 +832,47 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Would you like to stop all torrents?</source>
-        <translation>Vorresti fermare tutti i torrent?</translation>
+        <translation>Vuoi fermare tutti i torrent?</translation>
     </message>
     <message>
         <source>Start All</source>
-        <translation>Avvia Tutto</translation>
+        <translation>Avvia tutto</translation>
     </message>
     <message>
         <source>Stop All</source>
-        <translation>Ferma Tutto</translation>
+        <translation>Ferma tutto</translation>
+    </message>
+    <message>
+        <source>Torrent Creator</source>
+        <translation>Crea torrent</translation>
+    </message>
+    <message>
+        <source>Filter feed items...</source>
+        <translation>Filtra elementi feed...</translation>
+    </message>
+    <message>
+        <source>Info Hash v1</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Invert Selection</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Remove torrent and content</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Remove torrent</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Info Hash v2</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -721,7 +899,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Lingua</translation>
+        <translation type="vanished">Lingua</translation>
     </message>
     <message>
         <source>Email notification upon download completion</source>
@@ -797,7 +975,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>This server requires a secure connection (SSL)</source>
-        <translation>Questo server richiede una connessione sicura (SSL)</translation>
+        <translation type="vanished">Questo server richiede una connessione sicura (SSL)</translation>
     </message>
     <message>
         <source>Authentication</source>
@@ -1067,7 +1245,7 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Enable clickjacking protection</source>
-        <translation>Abilita protezione  clickjacking</translation>
+        <translation>Abilita protezione clickjacking</translation>
     </message>
     <message>
         <source>Enable Cross-Site Request Forgery (CSRF) protection</source>
@@ -1170,10 +1348,6 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
         <translation>Quando aggiungi un torrent</translation>
     </message>
     <message>
-        <source>Info: The password is saved unencrypted</source>
-        <translation>Info: la password è salvata non criptata</translation>
-    </message>
-    <message>
         <source>μTP-TCP mixed mode algorithm:</source>
         <translation>Algoritmo modo misto μTP-TC:</translation>
     </message>
@@ -1272,10 +1446,6 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     <message>
         <source>Asynchronous I/O threads:</source>
         <translation>Thread I/O asincroni:</translation>
-    </message>
-    <message>
-        <source>s</source>
-        <translation>s</translation>
     </message>
     <message>
         <source>Send buffer watermark:</source>
@@ -1454,10 +1624,6 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
         <translation>Non creare sottocartella</translation>
     </message>
     <message>
-        <source>Type of service (ToS) for connections to peers</source>
-        <translation>Tipo di servizio (ToS) per le connessioni ai peer</translation>
-    </message>
-    <message>
         <source>Outgoing connections per second:</source>
         <translation>Connessioni in uscita per secondo:</translation>
     </message>
@@ -1528,10 +1694,6 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     <message>
         <source>POSIX-compliant</source>
         <translation>Conforme a POSIX</translation>
-    </message>
-    <message>
-        <source>This option is less effective on Linux</source>
-        <translation>Questa opzione è meno efficace su Linux</translation>
     </message>
     <message>
         <source>It controls the internal state update interval which in turn will affect UI updates</source>
@@ -1704,10 +1866,6 @@ Usa ';' per dividere più voci.</translation>
         <translation>Dimensione buffer ricezione socket [0: predefinita sistema]:</translation>
     </message>
     <message>
-        <source>Use Subcategories</source>
-        <translation>Usa sottocategorie</translation>
-    </message>
-    <message>
         <source>Add to top of queue</source>
         <translation>Aggiungi in cima alla coda</translation>
     </message>
@@ -1846,7 +2004,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Coalesce reads &amp;amp; writes:</source>
-        <translation>Coalesce letture e scritture:</translation>
+        <translation>Letture e scritture condivise:</translation>
     </message>
     <message>
         <source>I2P inbound length:</source>
@@ -1854,7 +2012,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>It appends the text to the window title to help distinguish qBittorent instances</source>
-        <translation>Aggiunge il testo al titolo della finestra per aiutare a distinguere le istanze di qBittorent</translation>
+        <translation type="vanished">Aggiunge il testo al titolo della finestra per aiutare a distinguere le istanze di qBittorent</translation>
     </message>
     <message>
         <source>The WebUI username must be at least 3 characters long.</source>
@@ -1894,7 +2052,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Delete files permanently</source>
-        <translation>Elimina i file permanentemente</translation>
+        <translation>Elimina permanentemente i file</translation>
     </message>
     <message>
         <source>Auto</source>
@@ -1902,7 +2060,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Use alternating row colors</source>
-        <translation>Usa colori di riga alternati</translation>
+        <translation>Usa colori riga alternati</translation>
     </message>
     <message>
         <source>Display full announce URL in the Tracker column</source>
@@ -1926,7 +2084,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Automatically append these trackers to new downloads:</source>
-        <translation>Aggiungi automaticamente questi tracker ai nuovi download:</translation>
+        <translation>Aggiungi automaticamente ai nuovi download questi tracker:</translation>
     </message>
     <message>
         <source>Downloading torrents:</source>
@@ -1949,12 +2107,8 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <translation>Abilita flag di sicurezza cookie (richiede HTTPS o connessione LocalHost)</translation>
     </message>
     <message>
-        <source>When duplicate torrent is being added</source>
-        <translation>Quando viene aggiunto torrent duplicato</translation>
-    </message>
-    <message>
         <source>Action on double-click</source>
-        <translation>Azioni con il doppio clic</translation>
+        <translation>Azioni con doppio clic</translation>
     </message>
     <message>
         <source>Save statistics interval:</source>
@@ -1970,7 +2124,8 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Attempted to send email. Check your inbox to confirm success</source>
-        <translation>Tentativo di invio email. Controlla la tua posta in arrivo per confermare la ricezione</translation>
+        <translation type="vanished">Tentativo di invio email. 
+Controlla la posta in arrivo per confermare la ricezione</translation>
     </message>
     <message>
         <source>Automatically append trackers from URL to new downloads:</source>
@@ -2048,13 +2203,161 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <source>Log Files</source>
         <translation>File registro eventi</translation>
     </message>
+    <message>
+        <source>Enable optimized table rendering (experimental)</source>
+        <translation type="vanished">Abilita rendering tabella ottimizzata (sperimentale)</translation>
+    </message>
+    <message>
+        <source>Note: The password is saved unencrypted</source>
+        <translation>Nota: la password viene salvata non crittografata</translation>
+    </message>
+    <message>
+        <source>Internal hostname resolver cache expiry interval</source>
+        <translation>Intervallo scadenza cache resolver host interno</translation>
+    </message>
+    <message>
+        <source>sec</source>
+        <translation>sec</translation>
+    </message>
+    <message>
+        <source>Rotate API key</source>
+        <translation>Ruota chiave API</translation>
+    </message>
+    <message>
+        <source>Generate a key</source>
+        <translation>Genera una chiave</translation>
+    </message>
+    <message>
+        <source>When adding a duplicate torrent</source>
+        <translation>Quando aggiungi un torrent duplicato</translation>
+    </message>
+    <message>
+        <source>Delete API key</source>
+        <translation>Elimina chiave API</translation>
+    </message>
+    <message>
+        <source>%M: Comment</source>
+        <translation>%M: commmento</translation>
+    </message>
+    <message>
+        <source>Generate API key</source>
+        <translation>Genera chiave API</translation>
+    </message>
+    <message>
+        <source>Copied</source>
+        <translation>Copiati</translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation>Utente</translation>
+    </message>
+    <message>
+        <source>Reset filter selection</source>
+        <translation>Ripristina selezione filtro</translation>
+    </message>
+    <message>
+        <source>API Key</source>
+        <translation>Chiave API</translation>
+    </message>
+    <message>
+        <source>Copy API key</source>
+        <translation>Copia chiave API</translation>
+    </message>
+    <message>
+        <source>Differentiated Services Code Point (DSCP) for connections to peers</source>
+        <translation>DSCP (Differentiated Services Code Point) per connessioni ai peer</translation>
+    </message>
+    <message>
+        <source>no encryption used when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>SMTPS</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(alternative choice if supported)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>use SMTPS encryption when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Compact</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Display density:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>SMTP encryption:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Attempted to send test email.\nCheck your inbox to confirm success.\nCheck the Execution Log for errors.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Default port</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>STARTTLS</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Enable optimized table rendering</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Select the encryption type used when sending SMTP emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>It appends the text to the window title to help distinguish qBittorrent instances</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(last choice if no other option)</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Date format:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Browser default</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Resolve peer host names:</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Pread/pwrite</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>use STARTTLS encryption when sending emails</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The WebUI username must not contain a colon.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Localization</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>(best choice if supported)</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>PeerListWidget</name>
-    <message>
-        <source>IP</source>
-        <translation>IP</translation>
-    </message>
     <message>
         <source>Port</source>
         <translation>Porta</translation>
@@ -2130,6 +2433,10 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Peer ID Client</source>
         <translation>ID client peer</translation>
+    </message>
+    <message>
+        <source>IP/Address</source>
+        <translation>IP/indirizzo</translation>
     </message>
 </context>
 <context>
@@ -2313,14 +2620,6 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <translation>%1 (%2 in media)</translation>
     </message>
     <message>
-        <source>Download limit:</source>
-        <translation>Limite download:</translation>
-    </message>
-    <message>
-        <source>Upload limit:</source>
-        <translation>Limite upload:</translation>
-    </message>
-    <message>
         <source>Priority</source>
         <translation>Priorità</translation>
     </message>
@@ -2426,7 +2725,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Web seed URL:</source>
-        <translation>URL distributore web:</translation>
+        <translation>URL seed web:</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -2434,7 +2733,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Ratio / Time Active (in months), indicates how popular the torrent is</source>
-        <translation>Rapporto / Tempo Attivo (in mesi), indica quanto è popolare il torrent</translation>
+        <translation>Rapporto/tempo attivo (in mesi), indica quanto è popolare il torrent</translation>
     </message>
     <message>
         <source>Popularity:</source>
@@ -2454,7 +2753,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Web seed editing</source>
-        <translation>Modifica distributore web</translation>
+        <translation>Modifica seed web</translation>
     </message>
     <message>
         <source>Add web seeds...</source>
@@ -2463,6 +2762,10 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Private:</source>
         <translation>Privato:</translation>
+    </message>
+    <message>
+        <source>Availability:</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2494,11 +2797,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
 </context>
 <context>
     <name>SpeedLimitDialog</name>
-    <message>
-        <source>KiB/s</source>
-        <translation>KiB/s</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>StatsDialog</name>
     <message>
@@ -2564,6 +2863,14 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Total queued size:</source>
         <translation>Dimensione totale in coda:</translation>
+    </message>
+    <message>
+        <source>Tracker statistics</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Queued tracker announces:</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -2694,11 +3001,11 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Start torrents</source>
-        <translation>Avvia torrents</translation>
+        <translation>Avvia torrent</translation>
     </message>
     <message>
         <source>Stop torrents</source>
-        <translation>Ferma torrents</translation>
+        <translation>Ferma torrent</translation>
     </message>
 </context>
 <context>
@@ -2796,12 +3103,12 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Session Download</source>
         <comment>Amount of data downloaded since program open (e.g. in MB)</comment>
-        <translation>Scaricamento sessione</translation>
+        <translation type="vanished">Scaricamento sessione</translation>
     </message>
     <message>
         <source>Session Upload</source>
         <comment>Amount of data uploaded since program open (e.g. in MB)</comment>
-        <translation>Invio sessione</translation>
+        <translation type="vanished">Invio sessione</translation>
     </message>
     <message>
         <source>Remaining</source>
@@ -2826,7 +3133,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Ratio Limit</source>
         <comment>Upload share ratio limit</comment>
-        <translation>Limite rapporto di condivione</translation>
+        <translation>Limite rapporto di condivisione</translation>
     </message>
     <message>
         <source>Last Seen Complete</source>
@@ -2879,13 +3186,21 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <source>Status Icon</source>
         <translation>Icona di stato</translation>
     </message>
+    <message>
+        <source>Session Uploaded</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Session Downloaded</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Created On</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TrackerListWidget</name>
-    <message>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
     <message>
         <source>Status</source>
         <translation>Stato</translation>
@@ -2993,6 +3308,42 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Original</source>
         <translation>Originale</translation>
+    </message>
+    <message>
+        <source>URL/Announce Endpoint</source>
+        <translation>URL/annuncio punto finale</translation>
+    </message>
+    <message>
+        <source>BT Protocol</source>
+        <translation>Protocollo BT</translation>
+    </message>
+    <message>
+        <source>Next Announce</source>
+        <translation>Annuncio successivo</translation>
+    </message>
+    <message>
+        <source>Tier:</source>
+        <translation>Livello:</translation>
+    </message>
+    <message>
+        <source>Tracker error</source>
+        <translation>Errore tracker</translation>
+    </message>
+    <message>
+        <source>Unreachable</source>
+        <translation>Non raggiungibile</translation>
+    </message>
+    <message>
+        <source>Force reannounce to selected tracker(s)</source>
+        <translation>Forza il riannuncio ai tracker selezionati</translation>
+    </message>
+    <message>
+        <source>Min Announce</source>
+        <translation>Annuncio minimo</translation>
+    </message>
+    <message>
+        <source>Force reannounce to all trackers</source>
+        <translation>Forza ri-annuncio a tutti i tracker</translation>
     </message>
 </context>
 <context>
@@ -3129,7 +3480,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Limit share ratio...</source>
-        <translation>Limita rapporto di condivione...</translation>
+        <translation>Limita rapporto di condivisione...</translation>
     </message>
     <message>
         <source>Limit upload rate...</source>
@@ -3169,7 +3520,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Automatic Torrent Management</source>
-        <translation>Gestione Torrent Automatica</translation>
+        <translation>Gestione automatica torrent</translation>
     </message>
     <message>
         <source>Category</source>
@@ -3247,7 +3598,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Add...</source>
-        <translation>Aggiugi...</translation>
+        <translation>Aggiungi...</translation>
     </message>
     <message>
         <source>Info hash v1</source>
@@ -3283,11 +3634,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Force Start</source>
-        <translation>Forza Avvio</translation>
-    </message>
-    <message>
-        <source>Save path:</source>
-        <translation>Percorso salvataggio:</translation>
+        <translation>Forza avvio</translation>
     </message>
     <message>
         <source>Location:</source>
@@ -3314,8 +3661,8 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <translation>Aggiungi etichetta</translation>
     </message>
     <message>
-        <source>Category:</source>
-        <translation>Categoria:</translation>
+        <source>Content Path</source>
+        <translation>Percorso contenuto</translation>
     </message>
 </context>
 <context>
@@ -3348,6 +3695,30 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
         <source>inactive minutes</source>
         <translation>minuti di inattività</translation>
     </message>
+    <message>
+        <source>Default</source>
+        <translation>Predefinito</translation>
+    </message>
+    <message>
+        <source>Remove torrent</source>
+        <translation>Rimuovi torrent</translation>
+    </message>
+    <message>
+        <source>Remove torrent and its content</source>
+        <translation>Rimuovi torrent e il suo contenuto</translation>
+    </message>
+    <message>
+        <source>Stop torrent</source>
+        <translation>Ferma torrent</translation>
+    </message>
+    <message>
+        <source>Enable super seeding for torrent</source>
+        <translation>Abilita super seeding per torrent</translation>
+    </message>
+    <message>
+        <source>Action when the limit is reached</source>
+        <translation>Azione quando viene raggiunto il limite</translation>
+    </message>
 </context>
 <context>
     <name>about</name>
@@ -3360,7 +3731,7 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     </message>
     <message>
         <source>Also remove the content files</source>
-        <translation>Rimuovi anche i file di contenuti</translation>
+        <translation>Rimuovi anche i file dei contenuti</translation>
     </message>
     <message>
         <source>Remove tracker</source>
@@ -3372,14 +3743,6 @@ Ciò può essere utile se l'utente non è interessato all'anonimizzazione di I2P
     <message>
         <source>Download from URLs</source>
         <translation>Scarica da URL</translation>
-    </message>
-    <message>
-        <source>Download</source>
-        <translation>Scarica</translation>
-    </message>
-    <message>
-        <source>Add Torrent Links</source>
-        <translation>Aggiungi collegamenti torrent</translation>
     </message>
 </context>
 <context>
@@ -3838,7 +4201,7 @@ Il database è concesso in licenza con la licenza internazionale Creative Common
     </message>
     <message>
         <source>qBittorrent Mascot</source>
-        <translation>Mascottte qBittorrent</translation>
+        <translation>Mascotte qBittorrent</translation>
     </message>
     <message>
         <source>qBittorrent icon</source>
@@ -3888,11 +4251,11 @@ Il database è concesso in licenza con la licenza internazionale Creative Common
     </message>
     <message>
         <source>Search has finished</source>
-        <translation>Riecrca completata</translation>
+        <translation>Ricerca completata</translation>
     </message>
     <message>
         <source>An error occurred during search...</source>
-        <translation>Si è verificato un errore durante la ricerca...</translation>
+        <translation>Durante la ricerca si è verificato un errore...</translation>
     </message>
     <message>
         <source>Close tab</source>
@@ -3909,6 +4272,22 @@ Il database è concesso in licenza con la licenza internazionale Creative Common
     <message>
         <source>Close all tabs</source>
         <translation>Chiudi tutte le schede</translation>
+    </message>
+    <message>
+        <source>Refresh tab</source>
+        <translation>Scheda Aggiorna</translation>
+    </message>
+    <message>
+        <source>Stop search</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Use as search text</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Open download window</source>
+        <translation type="unfinished" />
     </message>
 </context>
 <context>
@@ -4037,6 +4416,14 @@ Puoi abilitarlo nelle impostazioni dell'applicazione.</translation>
         <source>URL cannot be empty</source>
         <translation>La URL non può essere vuota.</translation>
     </message>
+    <message>
+        <source>Open link</source>
+        <translation>Apri collegamento</translation>
+    </message>
+    <message>
+        <source>Author: </source>
+        <translation>Autore: </translation>
+    </message>
 </context>
 <context>
     <name>AutomatedRssDownloader</name>
@@ -4095,7 +4482,7 @@ Puoi abilitarlo nelle impostazioni dell'applicazione.</translation>
     </message>
     <message>
         <source>Assign Category:</source>
-        <translation>Asegna categoria:</translation>
+        <translation>Assegna categoria:</translation>
     </message>
     <message>
         <source>Regex mode: use Perl-compatible regular expressions</source>
@@ -4294,6 +4681,18 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
         <source>Add Stopped:</source>
         <translation>Aggiungi Fermato:</translation>
     </message>
+    <message>
+        <source>Rule cloning</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clear downloaded episodes confirmation</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Clone rule...</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>TrackerFiltersList</name>
@@ -4320,6 +4719,18 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     <message>
         <source>Stop torrents</source>
         <translation>Ferma torrent</translation>
+    </message>
+    <message>
+        <source>Tracker error</source>
+        <translation>Errore tracker</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Attenzione</translation>
+    </message>
+    <message>
+        <source>Other error</source>
+        <translation>Altro errore</translation>
     </message>
 </context>
 <context>
@@ -4493,6 +4904,46 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
         <source>Unable to set category</source>
         <translation>Impossibile impostare la categoria</translation>
     </message>
+    <message>
+        <source>Save path for incomplete torrents:</source>
+        <translation>Percorso salvataggio torrent incompleti:</translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <translation>Predefinito</translation>
+    </message>
+    <message>
+        <source>New Category</source>
+        <translation>Nuova categoria</translation>
+    </message>
+    <message>
+        <source>Save path:</source>
+        <translation>Percorso salvataggio:</translation>
+    </message>
+    <message>
+        <source>Yes</source>
+        <translation>Sì</translation>
+    </message>
+    <message>
+        <source>Category:</source>
+        <translation>Categoria:</translation>
+    </message>
+    <message>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
+        <source>Path:</source>
+        <translation>Percorso:</translation>
+    </message>
+    <message>
+        <source>Use another path for incomplete torrents:</source>
+        <translation>Per i torrent incompleti usa un altro percorso:</translation>
+    </message>
+    <message>
+        <source>Category does not exist</source>
+        <translation type="unfinished" />
+    </message>
 </context>
 <context>
     <name>CookiesDialog</name>
@@ -4537,7 +4988,7 @@ Supports the formats: S01E01, 1x1, 2017.12.31 and 31.12.2017 (Date formats also 
     </message>
     <message>
         <source>Are you sure you want to enable Automatic Torrent Management for the selected torrent(s)? They may be relocated.</source>
-        <translation>Sei sicuro di voler abilitare la gestione automatica torrent per i torrent selezionati? 
+        <translation>Vuoi abilitare la gestione automatica torrent per i torrent selezionati? 
 I torrent potranno essere spostati.</translation>
     </message>
 </context>
@@ -4545,7 +4996,7 @@ I torrent potranno essere spostati.</translation>
     <name>confirmRecheckDialog</name>
     <message>
         <source>Are you sure you want to recheck the selected torrent(s)?</source>
-        <translation>Confermi di voler ricontrollare i torrent selezionati?</translation>
+        <translation>Vuoi ricontrollare i torrent selezionati?</translation>
     </message>
     <message>
         <source>Recheck confirmation</source>
@@ -4592,7 +5043,318 @@ Per un funzionamento corretto della WebUI va abilitato JavaScript.</translation>
     </message>
     <message>
         <source>Invalid Username or Password.</source>
-        <translation>Username o password errati.</translation>
+        <translation>Nome utente o password errati.</translation>
+    </message>
+</context>
+<context>
+    <name>TorrentCreator</name>
+    <message>
+        <source>Private</source>
+        <translation>Privato</translation>
+    </message>
+    <message>
+        <source>Source</source>
+        <translation>Sorgente</translation>
+    </message>
+    <message>
+        <source>Queued</source>
+        <translation>In coda</translation>
+    </message>
+    <message>
+        <source>Unable to create torrent.</source>
+        <translation>Impossibile creare il torrent.</translation>
+    </message>
+    <message>
+        <source>Private
+                torrent (Won't distribute on DHT network)</source>
+        <translation>Torrent
+                privato (non verrà distribbuito nella rete DHT)</translation>
+    </message>
+    <message>
+        <source>Unable to export torrent file</source>
+        <translation>Impossibile esportare il file torrent</translation>
+    </message>
+    <message>
+        <source>Create New Torrent</source>
+        <translation>Crea nuovo torrent</translation>
+    </message>
+    <message>
+        <source>Comments:</source>
+        <translation>Commenti:</translation>
+    </message>
+    <message>
+        <source>Download Torrent</source>
+        <translation>Download torrent</translation>
+    </message>
+    <message>
+        <source>Status Icon</source>
+        <translation>Icona di stato</translation>
+    </message>
+    <message>
+        <source>Web seed URLs:</source>
+        <translation>URL seed web:</translation>
+    </message>
+    <message>
+        <source>Failed</source>
+        <translation>Falliti</translation>
+    </message>
+    <message>
+        <source>Comment</source>
+        <translation>Commento</translation>
+    </message>
+    <message>
+        <source>Finished</source>
+        <translation>Completati</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Impostazioni</translation>
+    </message>
+    <message>
+        <source>Error Message</source>
+        <translation>Messaggio d'errore:</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation>Stato</translation>
+    </message>
+    <message>
+        <source>Align to piece boundary for files larger
+                than:</source>
+        <translation>Allinea al limite sehmento per i file
+                più grandi di:</translation>
+    </message>
+    <message>
+        <source>Select file/folder to share:</source>
+        <translation>Seleziona file/cartella da condividere:</translation>
+    </message>
+    <message>
+        <source>Piece Size</source>
+        <translation>Dimensione segmento</translation>
+    </message>
+    <message>
+        <source>Progress</source>
+        <translation>Avanzamento</translation>
+    </message>
+    <message>
+        <source>Completed On</source>
+        <translation>Completato il</translation>
+    </message>
+    <message>
+        <source>Hybrid</source>
+        <translation>Ibrido</translation>
+    </message>
+    <message>
+        <source>Unable to load torrent creation tasks</source>
+        <translation>Impossibile caricare attività creazione torrent</translation>
+    </message>
+    <message>
+        <source>Optimize
+                    alignment</source>
+        <translation>Ottimizza
+                    allineamento</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>N/D</translation>
+    </message>
+    <message>
+        <source>Tracker URLs:</source>
+        <translation>URL tracker:</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to delete selected tasks?</source>
+        <translation>Vuoi eliminare le attività selezionate?</translation>
+    </message>
+    <message>
+        <source>Path:</source>
+        <translation>Percorso:</translation>
+    </message>
+    <message>
+        <source>Create Torrent</source>
+        <translation>Crea torrent</translation>
+    </message>
+    <message>
+        <source>Auto</source>
+        <translation>Automatico</translation>
+    </message>
+    <message>
+        <source>Started On</source>
+        <translation>Avviate il</translation>
+    </message>
+    <message>
+        <source>Web Seeds</source>
+        <translation>Seed web</translation>
+    </message>
+    <message>
+        <source>Start
+                seeding
+                immediately</source>
+        <translation>Avvia
+                immediatamente
+                seeding</translation>
+    </message>
+    <message>
+        <source>Format</source>
+        <translation>Formato</translation>
+    </message>
+    <message>
+        <source>Torrent format:</source>
+        <translation>Fornato torrent:</translation>
+    </message>
+    <message>
+        <source>Source Path</source>
+        <translation>Percorso sorgente</translation>
+    </message>
+    <message>
+        <source>Added On</source>
+        <translation>Aggiunto il</translation>
+    </message>
+    <message>
+        <source>Running</source>
+        <translation>In esecuzione</translation>
+    </message>
+    <message>
+        <source>Torrent Creator</source>
+        <translation>Crea torrent</translation>
+    </message>
+    <message>
+        <source>Source:</source>
+        <translation>Sorgente:</translation>
+    </message>
+    <message>
+        <source>Trackers</source>
+        <translation>Tracker</translation>
+    </message>
+    <message>
+        <source>Piece size:</source>
+        <translation>Dim. segmento:</translation>
+    </message>
+    <message>
+        <source>Fields</source>
+        <translation>Campi</translation>
+    </message>
+    <message>
+        <source>Remove Task</source>
+        <translation>Rimuovi attività</translation>
+    </message>
+    <message>
+        <source>Export Torrent</source>
+        <translation>Esporta torrent</translation>
+    </message>
+</context>
+<context>
+    <name>DownloadFromURLDialog</name>
+    <message>
+        <source>Download</source>
+        <translation>Download</translation>
+    </message>
+    <message>
+        <source>Magnet link</source>
+        <translation>Collegamento magnet</translation>
+    </message>
+    <message>
+        <source>Add torrent links</source>
+        <translation>Aggiungi collegamenti torrent</translation>
+    </message>
+    <message>
+        <source>One link per line (HTTP links, Magnet links and info-hashes are supported)</source>
+        <translation>Un collegamento per riga (collegamento HTTP, Magnet o info hash)</translation>
+    </message>
+    <message>
+        <source>URLs</source>
+        <translation>URL</translation>
+    </message>
+    <message>
+        <source>Add Torrent Links</source>
+        <translation>Aggiungi collegamenti torrent</translation>
+    </message>
+</context>
+<context>
+    <name>SpeedLimit</name>
+    <message>
+        <source>Limit:</source>
+        <translation>Limite:</translation>
+    </message>
+    <message>
+        <source>Speed limit</source>
+        <translation>Limite velocità</translation>
+    </message>
+    <message>
+        <source>Upload limit:</source>
+        <translation>Limite upload:</translation>
+    </message>
+    <message>
+        <source>Download limit:</source>
+        <translation>Limite download:</translation>
+    </message>
+    <message>
+        <source>KiB/s</source>
+        <translation>KiB/s</translation>
+    </message>
+</context>
+<context>
+    <name>ListWidget</name>
+    <message>
+        <source>Resize All</source>
+        <translation>Ridimensiona tutto</translation>
+    </message>
+    <message>
+        <source>Resize</source>
+        <translation>Ridimensiona</translation>
+    </message>
+</context>
+<context>
+    <name>confirmRotateAPIKeyDialog</name>
+    <message>
+        <source>Generate an API key? This key can be used to interact with qBittorrent's API.</source>
+        <translation>Vuoi generare una chiave API? 
+Questa chiave può essere usata per interagire con l'API di qBittorrent.</translation>
+    </message>
+    <message>
+        <source>Delete this API key? The current key will immediately stop working.</source>
+        <translation>Vuoi eliminare questa chiave API? 
+La chiave attuale smetterà immediatamente di funzionare.</translation>
+    </message>
+    <message>
+        <source>Rotate this API key? The current key will immediately stop working and a new key will be generated.</source>
+        <translation>Vuoi ruotare questa chiave API? 
+La chiave attuale smetterà immediatamente di funzionare e verrà generata una nuova chiave.</translation>
+    </message>
+</context>
+<context>
+    <name>RSSCloneRule</name>
+    <message>
+        <source>Clone</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Alert</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The cloned rule will be set as disabled and the downloaded episodes history will be cleared.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The rule name is unchanged. You must type a new rule name for the clone.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Please type the name for the clone of the download rule.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>The rule name cannot be empty.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Unable to clone the selected rule.</source>
+        <translation type="unfinished" />
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished" />
     </message>
 </context>
 </TS>

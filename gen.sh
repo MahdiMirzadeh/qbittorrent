@@ -140,6 +140,28 @@ compile_webui_translations() {
     fi
 }
 
+inject_webui_theme_css() {
+    index_file=$1
+
+    if [ ! -f "$index_file" ]; then
+        return 0
+    fi
+
+    if grep -F 'href="css/theme.css?v=${CACHEID}"' "$index_file" >/dev/null 2>&1; then
+        return 0
+    fi
+
+    tmp_file=$(mktemp 2>/dev/null || mktemp -t qbt_webui_index.XXXXXX)
+    awk '
+        !inserted && /<noscript>/ {
+            print "    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/theme.css?v=${CACHEID}\">"
+            inserted = 1
+        }
+        { print }
+    ' "$index_file" > "$tmp_file"
+    mv "$tmp_file" "$index_file"
+}
+
 # Build one theme from JSON
 build_one() {
     THEME_FILE=$1
@@ -244,6 +266,7 @@ EOF
         cp -a "$TEMPLATE_WEBUI_DIR"/. "$TMP_WEBUI_DIR"/
         sed -f "$SED_SCRIPT" "$TEMPLATE_WEBUI_DIR/private/css/theme.css.template" > "$TMP_WEBUI_DIR/private/css/theme.css"
         rm -f "$TMP_WEBUI_DIR/private/css/theme.css.template"
+        inject_webui_theme_css "$TMP_WEBUI_DIR/private/index.html"
         if [ -d "$TMP_WEBUI_DIR/translations" ]; then
             echo "     -> Compiling WebUI translations"
             compile_webui_translations "$TMP_WEBUI_DIR/translations"
