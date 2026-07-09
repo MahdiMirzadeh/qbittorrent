@@ -1,0 +1,3 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 6 5.5 V 26.5 C 6 27.8 7.4 28.7 8.5 28 L 25.5 17.1 C 26.5 16.5 26.5 15.1 25.5 14.5 L 8.5 3.9 C 7.4 3.2 6 4.1 6 5.5 Z" fill="%STATUS_DOWNLOADING%" stroke="%STATUS_DOWNLOADING%" stroke-width="1.8" stroke-linejoin="round"/>
+</svg>

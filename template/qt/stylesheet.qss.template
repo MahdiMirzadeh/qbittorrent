@@ -23,7 +23,6 @@ QMenuBar {
 
 QMenuBar::item {
   padding: 5px 10px;
-  width: 100%;
   color: %FG_PRIMARY%;
 }
 
